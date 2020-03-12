@@ -11,6 +11,7 @@
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <div class="container">
