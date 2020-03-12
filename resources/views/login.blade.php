@@ -13,7 +13,37 @@
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <div class="container">
+		<div class="img">
+			<img src="img/football-player2.svg" alt="">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+                <!-- gambar logo -->
+				<h2 class="title">Srikandi&nbsp; Futsal</h2>
+           		<div class="input-div user">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           				<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Lupa Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
