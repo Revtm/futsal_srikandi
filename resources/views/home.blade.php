@@ -13,6 +13,33 @@
     <title>Srikandi Futsal | Pesan & Cek Jadwal Lapangan Futsal</title>
   </head>
   <body>
+    <div class="container">
+        <div class="pattern"></div>
+        <div class="nav">
+            <div class="menu">
+                <ul>
+                    <li>Beranda</li>
+                    <li>Jadwal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="square-1 square"></div>
+        <div class="square-2 square"></div>
+        <div class="square-3 square"></div>
+
+        <div class="title-1">Futsal</div>
+        <div class="title-2">Srikandi</div>
+        
+        <div class="player">
+            <img src="football.png" alt="">
+        </div>
+
+        <div class="content">
+            <p>Lapangan futsal ini berlokasi di Srikandi Futsal & Batminton, Labuhan Ratu, Kedaton, Bandar Lampung City, Lampung 35132, Indonesia</p>
+            <button>Hubungi Sekarang</button>
+        </div>
+    </div> 
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
