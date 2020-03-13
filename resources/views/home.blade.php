@@ -32,7 +32,7 @@
         <div class="title-2">Srikandi</div>
         
         <div class="player">
-            <img src="football.png" alt="">
+            <img src="img/football.png" alt="">
         </div>
 
         <div class="content">
