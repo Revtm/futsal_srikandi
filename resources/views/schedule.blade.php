@@ -18,7 +18,7 @@
     <!-- bootstrap js -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="buatId()">
     <div class="container">
         <div class="jadwal">
             <div class="search">
@@ -28,7 +28,7 @@
             <ul v-for="lapangan in jadwal">
                 <li>Lapangan @{{ lapangan.lapangan }}</li>
                 <li v-for="jam in lapangan.urutan">
-                    <button @click="pilihJadwal(lapangan.label, jam.nomor)">
+                    <button class="tombol-pilihjadwal" @click="pilihJadwal(lapangan.label, jam.nomor)">
                         @{{ lapangan.label }}@{{ jam.nomor }}
                     </button>
                 </li>
@@ -41,5 +41,6 @@
     <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
     <script src="js/schedule-script.js"></script>
+    <script src="js/schedule-back-script.js"></script>
 </body>
 </html>
