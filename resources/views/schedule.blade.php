@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule for Srikandi Futsal</title>
     <link rel="stylesheet" href="css/schedule-style.css">
-    
+
     <!-- Vue JS -->
     <script type="text/javascript" src="js/vue/vue.js"></script>
-    
+
     <!-- bootstrap css -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    
+
     <!-- jquery -->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    
+
     <!-- bootstrap js -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
@@ -39,7 +39,7 @@
     <!-- datepicker from gijgo -->
     <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    
+
     <script src="js/schedule-script.js"></script>
 </body>
 </html>
