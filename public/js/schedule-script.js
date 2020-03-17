@@ -1,7 +1,9 @@
 // datepicker UI
 $(document).ready(function () {
     $('#datepicker').datepicker({
+
         uiLibrary: 'bootstrap', format: 'yyyy-mm-dd' 
+
     });
 });
 
