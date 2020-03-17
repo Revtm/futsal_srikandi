@@ -19,10 +19,11 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body onload="buatId()">
+
     <div class="container">
         <div class="jadwal">
             <div class="search">
-                <input id="datepicker" width="270" />
+                <input id="datepicker" width="270" value="2020-03-16" onchange="getJSON()" />
                 <br>
             </div>
             <ul v-for="lapangan in jadwal">
