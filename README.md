@@ -1,3 +1,14 @@
+======================================================================
+<h2>Setting .env Database </h2>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=srikandi
+DB_USERNAME=root
+DB_PASSWORD=
+======================================================================
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
