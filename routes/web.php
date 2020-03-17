@@ -17,10 +17,16 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('test',function () {
+    return view('test');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/schedule', function () {
-    return view('schedule');
-});
+
+Route::get('schedule', 'ScheduleCon@index' );
+Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
+
+
