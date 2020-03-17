@@ -7,12 +7,10 @@ function gantiWarna(kode){
       if(date == kode.tanggal){
         document.getElementById(kode.kode_lapangan).style.background = "black";
         document.getElementById(kode.kode_lapangan).style.color = "black";
-
       }else{
         document.getElementById(kode.kode_lapangan).style.background = "#dadada";
         document.getElementById(kode.kode_lapangan).style.color = "#35495e";
       }
-
 }
 
 //get json dari tabel transaksi db srikandi via ajax
