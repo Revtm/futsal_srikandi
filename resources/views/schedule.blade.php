@@ -18,10 +18,6 @@
     <!-- bootstrap js -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-    <style>
-    .tombol-pilihjadwal { background:#dadada; color: #35495e;}
-    .tombol-pilihjadwal:hover { background:#41b883; color: white;}
-    </style>
 </head>
 <body onload="buatId()">
 
