@@ -6,7 +6,6 @@
     <title>Schedule for Srikandi Futsal</title>
     <link rel="stylesheet" href="css/schedule-style.css">
 
-
     <!-- Vue JS -->
     <script type="text/javascript" src="js/vue/vue.js"></script>
 
@@ -18,6 +17,11 @@
 
     <!-- bootstrap js -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <style>
+    .tombol-pilihjadwal { background:#dadada; color: #35495e;}
+    .tombol-pilihjadwal:hover { background:#41b883; color: white;}
+    </style>
 </head>
 <body onload="buatId()">
 
@@ -50,4 +54,3 @@
     <script src="js/schedule-back-script.js"></script>
 </body>
 </html>
-
