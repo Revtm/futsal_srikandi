@@ -33,7 +33,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           				<input type="text" class="input" name="name">
+           				<input type="text" class="input" name="nama">
            		   </div>
            		</div>
            		<div class="input-div pass">
