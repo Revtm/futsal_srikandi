@@ -9,57 +9,36 @@ function hapusCSS(){
     }
 }
 
-function tombolHitam(kode){
-  var css = "#" + kode.kode_lapangan + "{background:black; color: black;}";
-  var style = document.createElement('style');
-
-   if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-   } else {
-        style.appendChild(document.createTextNode(css));
-   }
-
-   document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-function tombolBiru(){
-  var css =
-  ".tombol-pilihjadwal { background:#dadada; color: #35495e;} " +
-  ".tombol-pilihjadwal:hover { background:#41b883; color: white;}";
-
-  var style = document.createElement('style');
-
-   if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-   } else {
-        style.appendChild(document.createTextNode(css));
-   }
-
-   document.getElementsByTagName('head')[0].appendChild(style);
-}
 
 //fungsi untuk mengganti warna
 function gantiWarna(kode){
-
-    //ambil tanggal
-    var date = $('#datepicker').datepicker().value();
     //ubah warna
-      if(date == kode.tanggal){
-        tombolHitam(kode);
-      }
+    var css = "#" + kode.kode_lapangan + "{background:black; color: black;}";
+    var style = document.createElement('style');
+
+     if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+     } else {
+          style.appendChild(document.createTextNode(css));
+     }
+
+     document.getElementsByTagName('head')[0].appendChild(style);
 }
 
 //get json dari tabel transaksi db srikandi via ajax
 function getJSON() {
+    hapusCSS();
+    hapusCSS();
+    var date = $('#datepicker').datepicker().value();
       $.ajax({
          url: 'schedule/getdata',
          type: 'get',
          dataType: 'json',
          success: function(response){
-           hapusCSS();
-           tombolBiru();
             for(i = 0 ; i < response['data'].length ; i++){
-              gantiWarna(response['data'][i]);
+              if(date == response['data'][i].tanggal){
+                gantiWarna(response['data'][i]);
+              }
             }
          }
       });
