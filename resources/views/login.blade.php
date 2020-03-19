@@ -23,7 +23,8 @@
 			<!-- <img src="img/football-player2.svg" alt=""> -->
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="{{route('login')}}" method="POST">
+			{{csrf_field()}}
                 <!-- gambar logo -->
 				<h2 class="title">Srikandi&nbsp; Futsal</h2>
            		<div class="input-div user">
@@ -32,7 +33,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           				<input type="text" class="input">
+           				<input type="text" class="input" name="nama">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -41,7 +42,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" class="input" name="password">
             	   </div>
             	</div>
             	<a href="#">Lupa Password?</a>
