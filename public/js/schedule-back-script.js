@@ -1,3 +1,43 @@
+function hapusCSS(){
+	var h = document.head;
+  var ch = document.head.childNodes;
+
+    for(i = 0; i < ch.length ; i++){
+    	if(ch[i].nodeName == "STYLE"){
+        	h.removeChild(ch[i]);
+      }
+    }
+}
+
+function tombolHitam(kode){
+  var css = "#" + kode.kode_lapangan + "{background:black; color: black;}";
+  var style = document.createElement('style');
+
+   if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+   } else {
+        style.appendChild(document.createTextNode(css));
+   }
+
+   document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+function tombolBiru(){
+  var css =
+  ".tombol-pilihjadwal { background:#dadada; color: #35495e;} " +
+  ".tombol-pilihjadwal:hover { background:#41b883; color: white;}";
+
+  var style = document.createElement('style');
+
+   if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+   } else {
+        style.appendChild(document.createTextNode(css));
+   }
+
+   document.getElementsByTagName('head')[0].appendChild(style);
+}
+
 //fungsi untuk mengganti warna
 function gantiWarna(kode){
 
@@ -5,11 +45,7 @@ function gantiWarna(kode){
     var date = $('#datepicker').datepicker().value();
     //ubah warna
       if(date == kode.tanggal){
-        document.getElementById(kode.kode_lapangan).style.background = "black";
-        document.getElementById(kode.kode_lapangan).style.color = "black";
-      }else{
-        document.getElementById(kode.kode_lapangan).style.background = "#dadada";
-        document.getElementById(kode.kode_lapangan).style.color = "#35495e";
+        tombolHitam(kode);
       }
 }
 
@@ -20,6 +56,8 @@ function getJSON() {
          type: 'get',
          dataType: 'json',
          success: function(response){
+           hapusCSS();
+           tombolBiru();
             for(i = 0 ; i < response['data'].length ; i++){
               gantiWarna(response['data'][i]);
             }
