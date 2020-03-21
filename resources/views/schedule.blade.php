@@ -24,7 +24,7 @@
     <div class="container">
         <div class="jadwal">
             <div class="search">
-                <input id="datepicker" width="270" value="2020-03-16" onchange="getJSON()" />
+                <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()" />
 
                 <br>
             </div>

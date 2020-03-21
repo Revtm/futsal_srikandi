@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
     <title>Srikandi Futsal | Pesan & Cek Jadwal Lapangan Futsal</title>
@@ -20,7 +20,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Jadwal</a></li>
+                    <li><a href="schedule">Jadwal</a></li>
                 </ul>
             </div>
         </div>
@@ -31,7 +31,7 @@
 
         <div class="title-1">Futsal</div>
         <div class="title-2">Srikandi</div>
-        
+
         <div class="player">
             <img src="img/football.png" alt="">
         </div>
@@ -40,8 +40,8 @@
             <p>Lapangan futsal ini berlokasi di Srikandi Futsal & Batminton, Labuhan Ratu, Kedaton, Bandar Lampung City, Lampung 35132, Indonesia</p>
             <button>Hubungi Sekarang</button>
         </div>
-    </div> 
-	
+    </div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
     <!-- Optional JavaScript -->
