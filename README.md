@@ -1,3 +1,16 @@
+====================================================================== </br>
+file .sql yang dipakai: srikandi-new.sql </br>
+
+<h2>Setting .env Database </h2>
+DB_CONNECTION=mysql </br>
+DB_HOST=127.0.0.1 </br>
+DB_PORT=3306 </br>
+DB_DATABASE=srikandi </br>
+DB_USERNAME=root </br>
+DB_PASSWORD= </br>
+====================================================================== </br>
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
