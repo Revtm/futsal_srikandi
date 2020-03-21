@@ -17,7 +17,7 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -38,14 +38,24 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'operator',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'operator',
             'hash' => false,
         ],
+
+        'operator' => [
+            'driver' => 'session',
+            'provider' => 'operator',
+          ],
+  
+          'operator-api' => [
+              'driver' => 'token',
+              'provider' => 'operator',
+          ],
     ],
 
     /*
@@ -66,9 +76,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'operator' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Operator::class,
         ],
 
         // 'users' => [

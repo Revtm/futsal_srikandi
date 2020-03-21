@@ -30,3 +30,8 @@ Route::get('schedule', 'ScheduleCon@index' );
 Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
 
 
+Route::get('/login','AuthController@getLogin');
+Route::post('/login','AuthController@postLogin')->name('login');
+Route::get('/home',function() {
+    return 'Home';
+})->name('home');

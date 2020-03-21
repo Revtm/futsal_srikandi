@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Operator extends Authenticatable
 {
     use Notifiable;
 
@@ -15,8 +14,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = "operator";
+
+    protected $primaryKey = "kode_operator";
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'kode_operator', 'nama', 'password',
     ];
 
     /**
@@ -37,5 +40,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected $table = 'operator';
 }
