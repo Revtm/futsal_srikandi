@@ -25,6 +25,15 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/proto-op',function(){
+    return view('proto-back-op');
+});
+
+Route::post('/transaksi', 'Transaksi@tambahsewa');
+Route::get('/transaksii/{s}', function ($s){
+  return $s;
+});
+
 
 Route::get('schedule', 'ScheduleCon@index' );
 Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
