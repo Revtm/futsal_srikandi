@@ -35,3 +35,6 @@ Route::post('/login','AuthController@postLogin')->name('login');
 Route::get('/home',function() {
     return view('schedule');
 })->name('home');
+
+Route::get('/rekap', 'RekapControll@index');
+Route::get('/rekap/excel', 'RekapControll@eksporExcel');
