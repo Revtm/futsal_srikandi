@@ -36,5 +36,9 @@ Route::get('/home',function() {
     return view('schedule');
 })->name('home');
 
+Route::get('/tambahsewa', 'TambahSewaControll@index');
+Route::post('/tambahsewa/input', 'TambahSewaControll@tambahSewa');
+Route::get('/tambahsewa/datalapangan', 'TambahSewaControll@dataLapangan');
+
 Route::get('/rekap', 'RekapControll@index');
 Route::get('/rekap/excel', 'RekapControll@eksporExcel');

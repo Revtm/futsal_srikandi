@@ -18,6 +18,7 @@
     <!-- bootstrap js -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="css/tambahsewa-style.css">
 </head>
 <body onload="buatId()">
 
@@ -32,13 +33,25 @@
                 <li>Lapangan @{{ lapangan.lapangan }}</li>
                 <li v-for="jam in lapangan.urutan">
 
-                    <button class="tombol-pilihjadwal" @click="pilihJadwal(lapangan.label, jam.nomor)">
+                    <button class="tombol-pilihjadwal"  onclick="getDataLapangan(this.id)">
 
                         @{{ jam.nomor }}
                     </button>
                 </li>
             </ul>
         </div>
+    </div>
+
+    <div class="container">
+      <h2>Detail jadwal</h2>
+      <form method="post" action="\tambahsewa\input">
+        {{csrf_field()}}
+        <label>Nama Penyewa: </label> <input type="text" name="nama"> 
+        <label>Kontak Penyewa: </label> <input type="text" name="kontak">
+        <button type="submit" name="button btn">Submit</button>
+        <div class="kartu">
+        </div>
+      </form>
     </div>
 
     <!-- datepicker from gijgo -->
@@ -48,5 +61,7 @@
 
     <script src="js/schedule-script.js"></script>
     <script src="js/schedule-back-script.js"></script>
+    <script src="js/tambahsewa-back-script.js"></script>
+
 </body>
 </html>
