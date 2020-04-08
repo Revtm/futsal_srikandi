@@ -51,6 +51,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                    
                     @foreach($transaksi as $trs)
                         <tr>
                             <th scope="row">{{$loop->iteration}}</th>
@@ -60,8 +61,13 @@
                             <td>{{$trs->diskon}}</td>
                             <td>{{$trs->tanggal}}</td>
                             <td>
-                                <a href="" class="badge badge-success">Edit</a>
-                                <a href="" class="badge badge-danger">Delete</a>
+                                <form action="daftarpenyewa/{{$trs->kode_transaksi}}" method="post">
+                                    @method('delete');
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                
+                                <a href="daftarpenyewa/{{$trs->kode_transaksi}}/edit" class="badge badge-danger">Edit</a>
                             </td>
                         </tr>
                     @endforeach
@@ -70,6 +76,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <!-- datepicker from gijgo -->
     <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>

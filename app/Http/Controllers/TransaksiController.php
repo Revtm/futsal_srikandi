@@ -58,7 +58,6 @@ class TransaksiController extends Controller
 
 
 
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -87,7 +86,7 @@ class TransaksiController extends Controller
      */
     public function edit(Transaksi $transaksi)
     {
-        //
+        return view('edit',compact('transaksi'));
     }
 
     /**
@@ -99,7 +98,19 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, Transaksi $transaksi)
     {
-        //
+        
+        $updates = Transaksi::find($transaksi->kode_transaksi);
+        $updates->diskon = $request->diskon;
+        $updates->kode_jadwal = $request->jadwal;
+        $updates->tanggal = $request->tanggal;
+        $updates->save();
+
+        $updates = User::find($transaksi->kode_user);
+        $updates->nama = $request->nama;
+        $updates->telepon = $request->kontak;
+        $updates->save();
+
+        return redirect('/daftarpenyewa');
     }
 
     /**
@@ -110,6 +121,7 @@ class TransaksiController extends Controller
      */
     public function destroy(Transaksi $transaksi)
     {
-        //
+        Transaksi::destroy($transaksi->kode_transaksi);
+        return redirect('/daftarpenyewa');
     }
 }
