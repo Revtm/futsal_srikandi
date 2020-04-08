@@ -14,12 +14,12 @@ class TransaksiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        
+    {
+
         $transaksi = Transaksi::where('tanggal', '2020-04-07')
                ->orderBy('tanggal', 'desc')
                ->get();
-        
+
         return view('daftarpenyewa',compact('transaksi'));
     }
 
@@ -28,10 +28,36 @@ class TransaksiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        
-    }
+    public function store(Request $request){
+
+        $userfdb = User::where([['nama', '=', $request->nama],
+        ['telepon', '=', $request->kontak]])->first();
+
+        if($userfdb){
+
+        }else{
+            User::create(
+             ['kode_user' => "11", 'nama' => $request->nama,
+             'telepon' => $request->kontak, 'alamat' => "Jl. Planet Bekasi"]
+            );
+
+             $userfdb = User::where([['nama', '=', $request->nama],
+             ['telepon', '=', $request->kontak]])->first();
+
+        }
+
+
+
+        for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
+          Transaksi::create(
+            ['kode_transaksi' => $i."0018", 'kode_operator'=>"00001", 'kode_user' => $userfdb->kode_user,
+            'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>0,
+            'tanggal'=>'2020-04-07']
+          );
+        }
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,10 +65,7 @@ class TransaksiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-            
-    }
+
 
     /**
      * Display the specified resource.
