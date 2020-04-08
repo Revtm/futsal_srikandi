@@ -65,9 +65,10 @@
                                     @method('delete');
                                     @csrf
                                     <button type="submit" class="btn btn-danger">Delete</button>
+                                    <a href="daftarpenyewa/{{$trs->kode_transaksi}}/edit" class="btn btn-danger">Edit</a>
                                 </form>
                                 
-                                <a href="daftarpenyewa/{{$trs->kode_transaksi}}/edit" class="badge badge-danger">Edit</a>
+                                
                             </td>
                         </tr>
                     @endforeach
