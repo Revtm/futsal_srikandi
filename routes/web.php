@@ -37,8 +37,10 @@ Route::get('/home',function() {
 })->name('home');
 
 Route::get('/tambahsewa', 'TambahSewaControll@index');
-Route::post('/tambahsewa/input', 'TambahSewaControll@tambahSewa');
+Route::post('/tambahsewa/input', 'TransaksiController@store');
 Route::get('/tambahsewa/datalapangan', 'TambahSewaControll@dataLapangan');
 
 Route::get('/rekap', 'RekapControll@index');
 Route::get('/rekap/excel', 'RekapControll@eksporExcel');
+
+Route::get('/daftarpenyewa', 'TransaksiController@index');
