@@ -30,33 +30,7 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        $userfdb = User::where('nama', '=', $request->nama)
-        >where('telepon', '=', $request->kontak)
-        ->get();
-
-        if($userfdb){
-
-        }else{
-            $user = new User;
-            $user->kode_user="1";
-            $user->nama = $request->nama;
-            $user->telepon = $request->kontak;
-
-            $userfdb = User::where('nama', '=', $request->nama)
-            >where('telepon', '=', $request->kontak)
-            ->get();
-
-        }
-
-        $transaksi = new Transaksi;
-            $transaksi->kode_operator = '00001';
-            $transaksi->kode_user = $userfdb=>;
-            $transaksi->kode_lapangan = $request->kode_lapangan;
-            $transaksi->kode_jadwal = $request->kode_jadwal;
-            $transaksi->diskon = '0';
-            $transaksi->tanggal = '2020-04-07';
-            $transaksi->save();
-
+        
     }
 
     /**
@@ -89,7 +63,7 @@ class TransaksiController extends Controller
      */
     public function edit(Transaksi $transaksi)
     {
-        //
+        return view('edit',compact('transaksi'));
     }
 
     /**
@@ -101,7 +75,19 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, Transaksi $transaksi)
     {
-        //
+        
+        $updates = Transaksi::find($transaksi->kode_transaksi);
+        $updates->diskon = $request->diskon;
+        $updates->kode_jadwal = $request->jadwal;
+        $updates->tanggal = $request->tanggal;
+        $updates->save();
+
+        $updates = User::find($transaksi->kode_user);
+        $updates->nama = $request->nama;
+        $updates->telepon = $request->kontak;
+        $updates->save();
+
+        return redirect('/daftarpenyewa');
     }
 
     /**
@@ -112,6 +98,7 @@ class TransaksiController extends Controller
      */
     public function destroy(Transaksi $transaksi)
     {
-        //
+        Transaksi::destroy($transaksi->kode_transaksi);
+        return redirect('/daftarpenyewa');
     }
 }

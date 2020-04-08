@@ -66,7 +66,8 @@
                                     @csrf
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
-                                <a href="" class="badge badge-danger"></a>
+                                
+                                <a href="daftarpenyewa/{{$trs->kode_transaksi}}/edit" class="badge badge-danger">Edit</a>
                             </td>
                         </tr>
                     @endforeach
