@@ -56,7 +56,7 @@ class TransaksiController extends Controller
           );
         }
 
-
+}
 
 
     /**
@@ -98,7 +98,7 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, Transaksi $transaksi)
     {
-        
+
         $updates = Transaksi::find($transaksi->kode_transaksi);
         $updates->diskon = $request->diskon;
         $updates->kode_jadwal = $request->jadwal;
