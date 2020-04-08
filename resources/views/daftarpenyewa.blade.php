@@ -27,7 +27,7 @@
     <div class="container">
         <div class="jadwal">
             <div class="search">
-                <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>"/>
+                <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()"/>
                 <br>
             </div>
         </div>
@@ -40,7 +40,7 @@
 
                 <table class="table">
                     <thead class="thead-dark">
-                    @foreach($transaksi as $trs)
+                    
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Kode Transaksi</th>
@@ -51,7 +51,7 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                    @foreach($transaksi as $trs)
                         <tr>
                             <th scope="row">{{$loop->iteration}}</th>
                             <td>{{$trs->kode_transaksi}}</td>

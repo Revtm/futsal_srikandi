@@ -30,7 +30,33 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
+        $userfdb = User::where('nama', '=', $request->nama)
+        >where('telepon', '=', $request->kontak)
+        ->get();
+
+        if($userfdb){
+
+        }else{
+            $user = new User;
+            $user->kode_user="1";
+            $user->nama = $request->nama;
+            $user->telepon = $request->kontak;
+
+            $userfdb = User::where('nama', '=', $request->nama)
+            >where('telepon', '=', $request->kontak)
+            ->get();
+
+        }
+
+        $transaksi = new Transaksi;
+            $transaksi->kode_operator = '00001';
+            $transaksi->kode_user = $userfdb=>;
+            $transaksi->kode_lapangan = $request->kode_lapangan;
+            $transaksi->kode_jadwal = $request->kode_jadwal;
+            $transaksi->diskon = '0';
+            $transaksi->tanggal = '2020-04-07';
+            $transaksi->save();
+
     }
 
     /**
@@ -41,44 +67,6 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        // $userfdb = User::where('nama', $request->nama)
-        //         ->where('telepon', $request->kontak)
-        //        ->get();
-
-        //     if($userfdb){
-               
-        //     }else{
-        //         dd("salah");
-        //     }
-        //     $json = $request;
-        //     $reqarray = json_decode($json);
-        //     return $reqarray;
-
-        //     foreach ($reqarray as $rqs) {
-
-        //         $transaksi = new Transaksi;
-        //         $transaksi->kode_operator = '00001';
-        //         $transaksi->kode_user = $userfdb[0]->kode_user;
-        //         $transaksi->kode_lapangan = $rqs->kode_lapangan;
-        //         $transaksi->kode_jadwal = $rqs->kode_jadwal;
-        //         $transaksi->diskon = '123123';
-        //         $transaksi->tanggal = '2020-04-07';
-        //         $transaksi->save();
-        //         }
-
-                // return "berhasil";
-
-                $transaksi = new Transaksi;
-                $transaksi->kode_operator = '00001';
-                $transaksi->kode_user = '00001';
-                $transaksi->kode_lapangan = 'LA-08';
-                $transaksi->kode_jadwal = 'C20';
-                $transaksi->diskon = '0';
-                $transaksi->tanggal = '2020-04-07';
-
-                Transaksi::create([
-                    kode_opera
-                ])
             
     }
 
