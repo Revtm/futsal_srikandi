@@ -33,7 +33,7 @@ Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
 Route::get('/login','AuthController@getLogin');
 Route::post('/login','AuthController@postLogin')->name('login');
 Route::get('/home',function() {
-    return view('schedule');
+    return view('tambahsewa');
 })->name('home');
 
 Route::get('/tambahsewa', 'TambahSewaControll@index');

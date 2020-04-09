@@ -16,7 +16,7 @@ class TransaksiController extends Controller
     public function index()
     {
 
-        $transaksi = Transaksi::where('tanggal', '2020-04-07')
+        $transaksi = Transaksi::where('tanggal', '2020-04-09')
                ->orderBy('tanggal', 'desc')
                ->get();
 
@@ -46,15 +46,15 @@ class TransaksiController extends Controller
 
         }
 
-
-
         for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
           Transaksi::create(
-            ['kode_transaksi' => $i."0018", 'kode_operator'=>"00001", 'kode_user' => $userfdb->kode_user,
-            'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>0,
-            'tanggal'=>'2020-04-07']
+            ['kode_transaksi' => "18", 'kode_operator'=>"00001", 'kode_user' => $userfdb->kode_user,
+            'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>5000,
+            'tanggal'=>'2020-04-09']
           );
         }
+
+        return redirect('/tambahsewa');
 
 }
 
