@@ -41,7 +41,9 @@ Route::post('/tambahsewa/input', 'TransaksiController@store');
 Route::get('/tambahsewa/datalapangan', 'TambahSewaControll@dataLapangan');
 
 Route::get('/rekap', 'RekapControll@index');
-Route::get('/rekap/excel', 'RekapControll@eksporExcel');
+Route::post('/rekap/filter', 'RekapControll@filter');
+Route::get('/rekap/filter', 'RekapControll@filter');
+Route::get('/rekap/excel/{dari}/{ke}', 'RekapControll@eksporExcel')->name('excel.ekspor');
 
 Route::get('/daftarpenyewa', 'TransaksiController@index');
 Route::delete('/daftarpenyewa/{transaksi}','TransaksiController@destroy');

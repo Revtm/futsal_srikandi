@@ -14,11 +14,20 @@ use Illuminate\Http\Request;
 class RekapControll extends Controller
 {
     public function index(){
-      $dataRekap = RekapPenghasilan::paginate(2);
-      return view('prototype_rekap', ['rekap' => $dataRekap]);
+      $dataRekap = RekapPenghasilan::where('tanggal', date("Y-m-d"))->get();
+      $tanggal = ['d' => date("Y-m-d") , 'k' => date("Y-m-d")];
+      return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal]);
     }
 
-    public function eksporExcel(){
-      return Excel::download(new RekapEkspor, 'rekap_penghasilan.xlsx');
+    public function filter(Request $request){
+      $dataRekap = RekapPenghasilan::where([['tanggal','>=', $request->dari],
+      ['tanggal','<=', $request->ke]])->get();
+      $tanggal['d'] =  $request->dari;
+      $tanggal['k'] = $request->ke;
+      return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal]);
+    }
+
+    public function eksporExcel($dari, $ke){
+      return Excel::download(new RekapEkspor($dari, $ke), 'rekap_penghasilan.xlsx');
     }
 }

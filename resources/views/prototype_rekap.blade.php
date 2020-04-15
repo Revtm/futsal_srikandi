@@ -10,10 +10,21 @@
   <body>
     <div class="container">
         <h1>Halaman Rekap</h1>
-        <a href="/rekap/excel" class="btn btn-primary">Ekspor Excel</a>
+
+        <form method="post" action="/rekap/filter">
+        {{csrf_field()}}
+        <label>Dari tanggal: </label> <input id="date-dari" width="270" name="dari" value="<?php echo date("Y-m-d"); ?>"/>
+        <label>Hingga tanggal: </label> <input id="date-ke" width="270" name="ke" value="<?php echo date("Y-m-d"); ?>"/>
+        <br>
+        <button type="submit" class="btn" name="button">Filter Tanggal</button>
+        </form>
+        <br>
+
+        <a href="{{route('excel.ekspor', ['dari'=> $tanggal['d'], 'ke'=> $tanggal['k']])}}" class="btn btn-primary">Ekspor Excel</a>
+
         <br>
         <br>
-        <table border="1">
+        <table class="table">
           <tr>
             <th>Kode</th>
             <th>Tanggal</th>
@@ -31,12 +42,28 @@
               <td> {{$t->jam}} </td>
               <td> {{$t->diskon}} </td>
               <td> {{$t->harga}} </td>
-
             </tr>
           @endforeach
         </table>
-        {{$rekap->links()}}
+        
     </div>
 
+    <script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#date-dari').datepicker({
+
+            uiLibrary: 'bootstrap', format: 'yyyy-mm-dd'
+
+        });
+
+        $('#date-ke').datepicker({
+
+            uiLibrary: 'bootstrap', format: 'yyyy-mm-dd'
+
+        });
+    });
+    </script>
   </body>
 </html>
