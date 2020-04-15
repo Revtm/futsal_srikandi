@@ -11,30 +11,21 @@ class JadwalSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        for ($i=7; $i < 23; $i++) {
+            if($i <10 ){
+                $j = sprintf("%02d", $i);
+                $end = sprintf("%02d", $i+1);
+                $jam = $i.'00-'.$end.'00';
+            }else{
+                $j = $i;
+                $end = $i+1;
+                $jam = $i.'00-'.$end.'00';
+            } 
 
-            [
-                'kode_jadwal' => 'Administrator',
-                'jam' => 'admin@app.com',
-                'harga' => bcrypt('password'),
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                'name' => 'Agency',
-                'email' => 'agency@app.com',
-                'password' => bcrypt('password'),
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                'name' => 'End',
-                'email' => 'endcustomer@app.com',
-                'password' => bcrypt('password'),
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ]
-
-        ]);
+            DB::table('Jadwal')->insert([
+               'kode_jadwal' => 'A'.$j ,
+               'jam' => $jam,
+               'harga' => '110000'
+           ]);
     }
 }
