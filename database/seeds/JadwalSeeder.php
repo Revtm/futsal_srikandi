@@ -45,7 +45,7 @@ class JadwalSeeder extends Seeder
             DB::table('Jadwal')->insert([
                'kode_jadwal' => 'B'.$j ,
                'jam' => $jam,
-               'harga' => '110000'
+               'harga' => '120000'
            ]);
         }
 
@@ -63,7 +63,7 @@ class JadwalSeeder extends Seeder
             DB::table('Jadwal')->insert([
                'kode_jadwal' => 'C'.$j ,
                'jam' => $jam,
-               'harga' => '110000'
+               'harga' => '130000'
            ]);
         }
     }
