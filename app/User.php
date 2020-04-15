@@ -11,7 +11,7 @@ class User extends Model
     public $timestamps = false;
 
     function transaksi() {
-        return $this->hasMany('App\transaksi');
+        return $this->hasMany(Transaksi::class,'kode_user');
     }
 }
 

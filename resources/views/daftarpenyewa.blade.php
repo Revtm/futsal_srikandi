@@ -37,12 +37,13 @@
         <div class="row">
             <div class="col-10">
                 <h1 class="mt-3">Daftar Penyewa</h1>
-
                 <table class="table">
                     <thead class="thead-dark">
                     
                         <tr>
                             <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Kontak</th>
                             <th scope="col">Kode Transaksi</th>
                             <th scope="col">Kode Lapangan</th>
                             <th scope="col">Kode Jadwal</th>
@@ -55,6 +56,8 @@
                     @foreach($transaksi as $trs)
                         <tr>
                             <th scope="row">{{$loop->iteration}}</th>
+                            <td>{{$trs->user->nama}}</td>
+                            <td>{{$trs->user->telepon}}</td>
                             <td>{{$trs->kode_transaksi}}</td>
                             <td>{{$trs->kode_lapangan}}</td>
                             <td>{{$trs->kode_jadwal}}</td>
