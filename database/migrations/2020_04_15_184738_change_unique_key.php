@@ -22,7 +22,7 @@ class ChangeUniqueKey extends Migration
         Schema::create('operator', function (Blueprint $table) {
             $table->increments('kode_operator');
             $table->string('nama',50);
-            $table->string('password',50);
+            $table->string('password');
         });
 
         Schema::create('user', function (Blueprint $table) {
