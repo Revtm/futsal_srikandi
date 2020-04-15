@@ -13,7 +13,19 @@ class ChangeUniqueKey extends Migration
      */
     public function up()
     {
-        //
+        Schema::dropIfExists('transaksi');
+        Schema::dropIfExists('lapangan');
+        Schema::dropIfExists('jadwal');
+        Schema::dropIfExists('operator');
+        Schema::dropIfExists('user');
+
+        Schema::create('operator', function (Blueprint $table) {
+            $table->increments('kode_operator');
+            $table->string('nama',50);
+            $table->string('password',50);
+        });
+
+        
     }
 
     /**
