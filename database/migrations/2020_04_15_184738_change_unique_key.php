@@ -32,7 +32,32 @@ class ChangeUniqueKey extends Migration
             $table->string('telepon',12);
         });
 
-        
+        Schema::create('jadwal', function (Blueprint $table) {
+            $table->string('kode_jadwal',5);
+            $table->string('jam',15);
+            $table->integer('harga')->length(20)->unsigned();
+            $table->primary('kode_jadwal');
+        });
+
+        Schema::create('lapangan', function (Blueprint $table) {
+            $table->string('kode_lapangan',5);
+            $table->string('nama',50);
+            $table->string('lokasi',20);
+            $table->string('kode_jadwal',5);
+            $table->primary('kode_lapangan');
+        });
+
+        Schema::create('transaksi', function (Blueprint $table) {
+            $table->increments('kode_transaksi');
+            $table->integer('kode_operator')->unsigned();
+            $table->integer('kode_user')->unsigned();
+            $table->string('kode_lapangan',5);
+            $table->string('kode_jadwal',5);
+            $table->integer('diskon')->length(20)->unsigned();
+            $table->date('tanggal',30);
+        });
+
+       
     }
 
     /**
