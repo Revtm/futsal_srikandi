@@ -20,7 +20,7 @@ class TransaksiController extends Controller
         //        ->orderBy('tanggal', 'desc')
         //        ->get();
 
-        $transaksi = Transaksi::with('user')->get(); 
+        $transaksi = Transaksi::with('user','operator')->get(); 
 
         return view('daftarpenyewa',compact('transaksi'));
     }

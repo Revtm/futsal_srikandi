@@ -15,4 +15,8 @@ class Transaksi extends Model
         return $this->belongsTo(User::class,'kode_user');
     }
 
+    function operator() {
+        return $this->belongsTo(Operator::class,'kode_operator');
+    }
+
 }

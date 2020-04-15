@@ -13,5 +13,6 @@ class User extends Model
     function transaksi() {
         return $this->hasMany(Transaksi::class,'kode_user');
     }
+
 }
 

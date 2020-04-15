@@ -45,6 +45,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Kontak</th>
                             <th scope="col">Kode Transaksi</th>
+                            <th scope="col">Operator</th>
                             <th scope="col">Kode Lapangan</th>
                             <th scope="col">Kode Jadwal</th>
                             <th scope="col">Diskon</th>
@@ -59,6 +60,7 @@
                             <td>{{$trs->user->nama}}</td>
                             <td>{{$trs->user->telepon}}</td>
                             <td>{{$trs->kode_transaksi}}</td>
+                            <td>{{$trs->operator->nama}}</td>
                             <td>{{$trs->kode_lapangan}}</td>
                             <td>{{$trs->kode_jadwal}}</td>
                             <td>{{$trs->diskon}}</td>
