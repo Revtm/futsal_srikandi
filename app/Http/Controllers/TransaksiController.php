@@ -16,7 +16,7 @@ class TransaksiController extends Controller
     public function index()
     {
 
-        $transaksi = Transaksi::where('tanggal', '2020-04-09')
+        $transaksi = Transaksi::where('tanggal', '2020-04-15')
                ->orderBy('tanggal', 'desc')
                ->get();
 
