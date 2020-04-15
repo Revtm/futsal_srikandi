@@ -50,6 +50,7 @@
                             <th scope="col">Kode Jadwal</th>
                             <th scope="col">Diskon</th>
                             <th scope="col">Tanggal</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -67,7 +68,7 @@
                             <td>{{$trs->tanggal}}</td>
                             <td>
                                 <form action="daftarpenyewa/{{$trs->kode_transaksi}}" method="post">
-                                    @method('delete');
+                                    @method('delete')
                                     @csrf
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                     <a href="daftarpenyewa/{{$trs->kode_transaksi}}/edit" class="btn btn-primary">Edit</a>
