@@ -11,15 +11,17 @@ class JadwalSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->delete();
+
         for ($i=7; $i < 23; $i++) {
             if($i <10 ){
                 $j = sprintf("%02d", $i);
                 $end = sprintf("%02d", $i+1);
-                $jam = $i.'00-'.$end.'00';
+                $jam = $j.'.00-'.$end.'.00';
             }else{
                 $j = $i;
                 $end = $i+1;
-                $jam = $i.'00-'.$end.'00';
+                $jam = $i.'.00-'.$end.'.00';
             } 
 
             DB::table('Jadwal')->insert([
@@ -27,5 +29,8 @@ class JadwalSeeder extends Seeder
                'jam' => $jam,
                'harga' => '110000'
            ]);
+        }
+
+        
     }
 }
