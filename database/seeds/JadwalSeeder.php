@@ -11,7 +11,7 @@ class JadwalSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
+        DB::table('jadwal')->delete();
 
         for ($i=7; $i < 23; $i++) {
             if($i <10 ){
