@@ -11,6 +11,7 @@ class OperatorSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('operator')->delete();
         DB::table('operator')->insert([
             [
                 'nama' => 'Rivaldo',

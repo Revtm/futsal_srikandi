@@ -16,11 +16,8 @@ class TransaksiController extends Controller
     public function index()
     {
 
-        // $transaksi = Transaksi::
-        //        ->orderBy('tanggal', 'desc')
-        //        ->get();
 
-        $transaksi = Transaksi::with('user','operator')->get(); 
+        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-16')->get(); 
 
         return view('daftarpenyewa',compact('transaksi'));
     }

@@ -11,6 +11,7 @@ class TransaksiSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('transaksi')->delete();
         DB::table('transaksi')->insert([
             [
                 'kode_operator' => '1',

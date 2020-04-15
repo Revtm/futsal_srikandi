@@ -11,6 +11,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('user')->delete();
         DB::table('user')->insert([
             [
                 'nama' => 'Budi Budiman',
