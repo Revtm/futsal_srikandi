@@ -25,6 +25,13 @@ class ChangeUniqueKey extends Migration
             $table->string('password',50);
         });
 
+        Schema::create('user', function (Blueprint $table) {
+            $table->increments('kode_user');
+            $table->string('nama',50);
+            $table->string('alamat',30);
+            $table->string('telepon',12);
+        });
+
         
     }
 
