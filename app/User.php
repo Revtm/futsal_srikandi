@@ -9,5 +9,9 @@ class User extends Model
     protected $fillable = ['kode_user', 'nama', 'alamat', 'telepon'];
     protected $primaryKey = 'kode_user';
     public $timestamps = false;
+
+    function transaksi() {
+        return $this->hasMany('App\transaksi');
+    }
 }
 
