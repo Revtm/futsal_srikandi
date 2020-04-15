@@ -57,7 +57,15 @@ class ChangeUniqueKey extends Migration
             $table->date('tanggal',30);
         });
 
-       
+        Schema::table('lapangan', function (Blueprint $table) {
+            $table->foreign('kode_jadwal')->references('kode_jadwal')->on('jadwal');
+        });
+
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->foreign('kode_operator')->references('kode_operator')->on('operator');
+            $table->foreign('kode_lapangan')->references('kode_lapangan')->on('lapangan');
+            $table->foreign('kode_user')->references('kode_user')->on('user');
+        });
     }
 
     /**
