@@ -61,7 +61,7 @@ class JadwalSeeder extends Seeder
             } 
 
             DB::table('Jadwal')->insert([
-               'kode_jadwal' => 'C'.$j ,
+               'kode_jadwal' => 'T'.$j ,
                'jam' => $jam,
                'harga' => '130000'
            ]);
