@@ -33,12 +33,17 @@ Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
 Route::get('/login','AuthController@getLogin');
 Route::post('/login','AuthController@postLogin')->name('login');
 Route::get('/home',function() {
-    return view('schedule');
+    return view('tambahsewa');
 })->name('home');
 
 Route::get('/tambahsewa', 'TambahSewaControll@index');
-Route::post('/tambahsewa/input', 'TambahSewaControll@tambahSewa');
+Route::post('/tambahsewa/input', 'TransaksiController@store');
 Route::get('/tambahsewa/datalapangan', 'TambahSewaControll@dataLapangan');
 
 Route::get('/rekap', 'RekapControll@index');
 Route::get('/rekap/excel', 'RekapControll@eksporExcel');
+
+Route::get('/daftarpenyewa', 'TransaksiController@index');
+Route::delete('/daftarpenyewa/{transaksi}','TransaksiController@destroy');
+Route::get('/daftarpenyewa/{transaksi}/edit','TransaksiController@edit');
+Route::patch('/daftarpenyewa/{transaksi}','TransaksiController@update');

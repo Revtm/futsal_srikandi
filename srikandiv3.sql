@@ -101,7 +101,7 @@ DROP TABLE IF EXISTS `rekap`;
 /*!50001 DROP VIEW IF EXISTS `rekap`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE VIEW `rekap` AS SELECT 
+/*!50001 CREATE VIEW `rekap` AS SELECT
  1 AS `kode_transaksi`,
  1 AS `tanggal`,
  1 AS `kode_lapangan`,
@@ -118,7 +118,7 @@ DROP TABLE IF EXISTS `tambahsewa`;
 /*!50001 DROP VIEW IF EXISTS `tambahsewa`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE VIEW `tambahsewa` AS SELECT 
+/*!50001 CREATE VIEW `tambahsewa` AS SELECT
  1 AS `kode_lapangan`,
  1 AS `lokasi`,
  1 AS `kode_jadwal`,

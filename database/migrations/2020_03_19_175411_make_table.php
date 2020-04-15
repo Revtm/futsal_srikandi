@@ -25,7 +25,7 @@ class MakeTable extends Migration
             $table->string('password',50);
             $table->primary('kode_operator');
         });
-        
+
         Schema::create('user', function (Blueprint $table) {
             $table->string('kode_user',5);
             $table->string('nama',50);
