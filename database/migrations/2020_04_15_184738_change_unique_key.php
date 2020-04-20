@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MakeTable extends Migration
+class ChangeUniqueKey extends Migration
 {
     /**
      * Run the migrations.
@@ -20,18 +20,16 @@ class MakeTable extends Migration
         Schema::dropIfExists('user');
 
         Schema::create('operator', function (Blueprint $table) {
-            $table->string('kode_operator',5);
+            $table->increments('kode_operator');
             $table->string('nama',50);
-            $table->string('password',50);
-            $table->primary('kode_operator');
+            $table->string('password');
         });
 
         Schema::create('user', function (Blueprint $table) {
-            $table->string('kode_user',5);
+            $table->increments('kode_user');
             $table->string('nama',50);
             $table->string('alamat',30);
             $table->string('telepon',12);
-            $table->primary('kode_user');
         });
 
         Schema::create('jadwal', function (Blueprint $table) {
@@ -50,16 +48,24 @@ class MakeTable extends Migration
         });
 
         Schema::create('transaksi', function (Blueprint $table) {
-            $table->string('kode_transaksi',5);
-            $table->string('kode_operator',5);
-            $table->string('kode_user',5);
+            $table->increments('kode_transaksi');
+            $table->integer('kode_operator')->unsigned();
+            $table->integer('kode_user')->unsigned();
             $table->string('kode_lapangan',5);
             $table->string('kode_jadwal',5);
             $table->integer('diskon')->length(20)->unsigned();
             $table->date('tanggal',30);
-            $table->primary('kode_transaksi');
         });
 
+        Schema::table('lapangan', function (Blueprint $table) {
+            $table->foreign('kode_jadwal')->references('kode_jadwal')->on('jadwal');
+        });
+
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->foreign('kode_operator')->references('kode_operator')->on('operator');
+            $table->foreign('kode_lapangan')->references('kode_lapangan')->on('lapangan');
+            $table->foreign('kode_user')->references('kode_user')->on('user');
+        });
     }
 
     /**

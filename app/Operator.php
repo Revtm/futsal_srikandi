@@ -40,4 +40,8 @@ class Operator extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    function transaksi() {
+        return $this->hasMany(Transaksi::class,'kode_operator');
+    }
+
 }

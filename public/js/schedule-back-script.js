@@ -29,6 +29,7 @@ function gantiWarna(kode){
 function getJSON() {
     hapusCSS();
     hapusCSS();
+		hapusCSS();
     var date = $('#datepicker').datepicker().value();
       $.ajax({
          url: 'schedule/getdata',
@@ -50,7 +51,7 @@ function getJSON() {
 //id lapangan yang ada di tabel transaksi
 function buatId() {
   var jadwal = document.querySelectorAll('.tombol-pilihjadwal');
-  var j = 8;
+  var j = 7;
 
 // set id pertombol
   for (var i = 0; i < jadwal.length; i++){
@@ -58,22 +59,22 @@ function buatId() {
         if(j < 10) jadwal[i].id = "LA-0" + j;
         else jadwal[i].id = "LA-" + j;
         j++;
-        if(j == 24){
-          j = 8;
+        if(j == 23){
+          j = 7;
         }
     }else if(i < 32){
       if(j < 10) jadwal[i].id = "LT-0" + j;
       else jadwal[i].id = "LT-" + j;
         j++;
-        if(j == 24){
-          j = 8;
+        if(j == 23){
+          j = 7;
         }
     }else{
       if(j < 10) jadwal[i].id = "LB-0" + j;
       else jadwal[i].id = "LB-" + j;
         j++;
-        if(j == 24){
-          j = 8;
+        if(j == 23){
+          j = 7;
         }
     }
   }
