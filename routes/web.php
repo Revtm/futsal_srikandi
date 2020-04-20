@@ -32,9 +32,10 @@ Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
 
 Route::get('/login','AuthController@getLogin');
 Route::post('/login','AuthController@postLogin')->name('login');
-Route::get('/home',function() {
-    return view('tambahsewa');
-})->name('home');
+// Route::get('/home',function() {
+//     return view('tambahsewa');
+// })->name('home');
+Route::get('/home','DashboardController@index')->name('home');
 
 Route::get('/tambahsewa', 'TambahSewaControll@index');
 Route::post('/tambahsewa/input', 'TransaksiController@store');
