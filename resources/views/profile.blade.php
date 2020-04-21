@@ -106,7 +106,46 @@
 		</form>
 	</section>
 
-    
+    <section class="stat" id="stat">
+        <div class="content-box">
+            <br><br>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                            <i class="fa fa-camera"></i>
+                            <h2><span class="counter text-counter">3398</span><span>+</span>
+                            </h2>
+                            <p>Views</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                            <i class="fa fa-camera"></i>
+                            <h2><span class="counter text-counter">3398</span><span>+</span>
+                            </h2>
+                            <p>Views</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                            <i class="fa fa-android"></i>
+                            <h2><span class="counter text-counter">3398</span><span>+</span>
+                            </h2>
+                            <p>Views</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                            <i class="fa fa-edit"></i>
+                            <h2><span class="counter text-counter">3398</span><span>+</span>
+                            </h2>
+                            <p>Views</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 	<section class="contact" id="contact">
 		<h3 class="header-text">Contact Us</h3>
