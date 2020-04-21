@@ -388,4 +388,34 @@ footer p {
     background-color: rgb(221, 221, 221);
 }
 
+#stat .content-box .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+}
 
+.stat {
+    background: #121212;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: white;
+    background-attachment: fixed;
+    margin-top: 209px;
+}
+
+.stat i {
+    font-size: 50px;
+}
+
+.stat-items h2 {
+    font-weight: bold;
+    font-size: 42px;
+    color: darkorange;
+}
+
+.stat p {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
