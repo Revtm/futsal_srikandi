@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller
 {
     public function index(Request $request) {
-        return view('dashboardoperator', ['operator'=>$request->session()->get('nama')]);
+        return view('dashboardoperator', ['operator_nama'=>$request->session()->get('nama')]);
     }
 
     public function accessSessionData(Request $request) {

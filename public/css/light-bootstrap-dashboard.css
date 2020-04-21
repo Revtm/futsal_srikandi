@@ -1,3 +1,7 @@
+.capitalize{
+    text-transform: capitalize;
+}
+
 /*      light colors         */
 @keyframes spin {
     from {

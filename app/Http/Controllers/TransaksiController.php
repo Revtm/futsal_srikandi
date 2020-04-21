@@ -13,13 +13,13 @@ class TransaksiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
 
-        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-16')->get(); 
+        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-21')->get(); 
 
-        return view('daftarpenyewa',compact('transaksi'));
+        return view('daftarpenyewa',compact('transaksi'), ['operator_nama'=>$request->session()->get('nama')]);
     }
 
     /**
@@ -47,9 +47,9 @@ class TransaksiController extends Controller
 
         for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
           Transaksi::create(
-            ['kode_transaksi' => "18", 'kode_operator'=>"00001", 'kode_user' => $userfdb->kode_user,
+            ['kode_transaksi' => "18", 'kode_operator'=> 3, 'kode_user' => $userfdb->kode_user,
             'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>5000,
-            'tanggal'=>'2020-04-09']
+            'tanggal'=>'2020-04-21']
           );
         }
 

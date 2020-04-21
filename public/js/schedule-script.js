@@ -8,7 +8,7 @@ $(document).ready(function () {
 });
 
 new Vue({
-    el: '.container',
+    el: '.jadwal',
     data: {
         jadwal: {
             '1': {
@@ -53,7 +53,7 @@ new Vue({
         pilihJadwal(lapangan, jam) {
             //cara mendapatkan nilai dari datepicker
             var date = $('#datepicker').datepicker().value();
-          //  alert('Anda memilih lapangan : ' + lapangan + jam + '\nPada ' + date);
+           alert('Anda memilih lapangan : ' + lapangan + jam + '\nPada ' + date);
         }
     }
 })

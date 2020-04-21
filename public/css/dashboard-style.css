@@ -132,6 +132,22 @@ a.navbar-brand{
 }
 
 /* Responsive columns */
+@media screen and (max-height: 768px) {
+    .card {
+        width: 240px;
+        height: 240px;
+    }
+
+    .overlay {
+        top: 30px;
+        left: 60px;
+    }
+
+    .rows{
+        height: 75vh;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;

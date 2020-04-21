@@ -7,8 +7,8 @@ use App\TambahSewaModel;
 
 class TambahSewaControll extends Controller
 {
-    public function index(){
-      return view('tambahsewa');
+    public function index(Request $request){
+      return view('tambahsewa', ['operator_nama'=>$request->session()->get('nama')]);
     }
 
     public function dataLapangan(){
