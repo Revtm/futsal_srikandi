@@ -191,6 +191,10 @@ header nav li {
     }
 }
 
+.services-area {
+    background-color: #ddd
+}
+
 .services-area .content-area .single-service {
     height: 300px;
     padding: 20px;
@@ -206,7 +210,7 @@ header nav li {
     width: 80px;
     height: 80px;
     display: inline-block;
-    background: #262626;
+    background: rgb(41,173,118);
     border-radius: 50%;
     margin-bottom: 20px;
 }

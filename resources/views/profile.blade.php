@@ -147,14 +147,14 @@
 	</section>
 
 	<section class="contact" id="contact">
-		<h3 class="header-text">Contact Us</h3>
-		<p>Lorem ipsum dolor sit amet.</p>
+		<h3 class="header-text">Hubungi Kami</h3>
+		<p>Untuk info booking dan pemesanan silahkan hubungi kami</p>
 		<div class="content-area">
 			<div class="single-contact">
-				<i class="fa fa-map-marker"></i>
-				<p>Ryacudu Street, 30B <br> South Lampung Regency, Lampung</p>
+                <i class="fa fa-map-marker"></i>
+				<p>Jl. Pelita I, Labuhan Ratu <br> Bandar Lampung, Lampung</p>
 				<i class="fa fa-envelope"></i>
-				<p>srikandirent@gmail.com</p>
+				<p>futsal@srikandi.com</p>
 				<i class="fa fa-phone"></i>
 				<p>+628 1411 15543</p>
 			</div>
@@ -168,7 +168,7 @@
 	</section>
 
 	<footer>
-		<p>All Right reserved by &copy; <a href="#">Rivaldo Fernandes</a></p>
+		<p>All Right reserved by &copy; <a href="#">Team Basing Aja 2020</a></p>
 	</footer>
 
 	<script src="/js/profile.js"></script>
