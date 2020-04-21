@@ -353,7 +353,7 @@ div.active {
 }
 
 .single-contact input[type=submit] {
-    background: #F8C300;
+    background: rgb(41,173,118);
     border: none;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
