@@ -393,26 +393,23 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: auto;
-}
-
-.stat {
-    background: #121212;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    color: white;
-    background-attachment: fixed;
-    margin-top: 209px;
+    height: 10%;
+    padding-top: 40%;
 }
 
 .stat i {
     font-size: 50px;
 }
 
+.col-md-3 {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
 .stat-items h2 {
     font-weight: bold;
     font-size: 42px;
-    color: darkorange;
+    color: rgb(41,173,118);
 }
 
 .stat p {

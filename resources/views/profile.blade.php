@@ -53,40 +53,80 @@
 			<h1>Futsal Srikandi</h1>
 			<h3>Make it Easy...</h3>
 			<a href="/home" class="btn">Get Started</a>
-		</div>
+        </div>
+        <div class="stat" id="stat">
+        <div class="content-box">
+            <br><br>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                        <i class="fas fa-users"></i>
+                            <h2><span class="counter text-counter">800</span><span>+</span>
+                            </h2>
+                            <p>Pengguna</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                        <i class="fas fa-futbol"></i>
+                            <h2><span class="counter text-counter">3</span>
+                            </h2>
+                            <p>Lapangan</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                        <i class="fas fa-tshirt"></i>
+                            <h2><span class="counter text-counter">40</span>
+                            </h2>
+                            <p>Items</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-items">
+                        <i class="fas fa-clock"></i>
+                            <h2><span class="counter text-counter">48</span><span>+</span>
+                            </h2>
+                            <p>Jadwal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 	</section>
 
 	<section class="services-area" id="services">
-		<h3 class="header-text">Our Services</h3>
-		<p>We provide cool vehicle for you</p>
+		<h3 class="header-text">Layanan Kami</h3>
+		<p>Kami Menyediakan Layanan & Venue Olahraga Terbaik Untuk Anda </p>
 		<div class="content-area">
 			<div class="single-service">
 				<div class="icon-area">
-					<i class="fas fa-car"></i>
+                <i class="fas fa-map"></i>
 				</div>
-				<h2>Car</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, inventore.</p>
+				<h2>Lapangan</h2>
+				<p>Menyediakan layanan booking lapangan futsal untuk kegiatan berolahraga anda</p>
 			</div>
 			<div class="single-service">
 				<div class="icon-area">
-					<i class="fas fa-motorcycle"></i>
+                <i class="fas fa-calendar-alt"></i>
 				</div>
-				<h2>Motorcycle</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, inventore.</p>
+				<h2>Event Turnamen</h2>
+				<p>Memberikan layanan dan harga terbaik untuk anda yang akan mengadakan acara serta turnamen olahraga</p>
 			</div>
 			<div class="single-service">
 				<div class="icon-area">
-					<i class="fas fa-bicycle"></i>
+                <i class="fas fa-dumbbell"></i>
 				</div>
-				<h2>Bicycle</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, inventore.</p>
+				<h2>Perlengkapan Olahraga</h2>
+				<p>Menyediakan perlengakapan olahraga dengan kualitas terbaik demi kenyamanan anda</p>
 			</div>
 		</div>
     </section>
 
 	<section class="newsletter" id="newsletter">
 		<h3 class="header-text">Subscribe</h3>
-		<p>Get Our Latest Information quickly</p>
+		<p></p>
 		<form action="">
 			<div class="field-name">
 				<i class="fas fa-user"></i>
@@ -105,47 +145,6 @@
 			</div>
 		</form>
 	</section>
-
-    <section class="stat" id="stat">
-        <div class="content-box">
-            <br><br>
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-3">
-                        <div class="stat-items">
-                            <i class="fa fa-camera"></i>
-                            <h2><span class="counter text-counter">3398</span><span>+</span>
-                            </h2>
-                            <p>Views</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="stat-items">
-                            <i class="fa fa-camera"></i>
-                            <h2><span class="counter text-counter">3398</span><span>+</span>
-                            </h2>
-                            <p>Views</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="stat-items">
-                            <i class="fa fa-android"></i>
-                            <h2><span class="counter text-counter">3398</span><span>+</span>
-                            </h2>
-                            <p>Views</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="stat-items">
-                            <i class="fa fa-edit"></i>
-                            <h2><span class="counter text-counter">3398</span><span>+</span>
-                            </h2>
-                            <p>Views</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
 
 	<section class="contact" id="contact">
 		<h3 class="header-text">Contact Us</h3>
@@ -175,7 +174,19 @@
 	<script src="/js/profile.js"></script>
 	<script src="https://kit.fontawesome.com/3f4aa1c6f5.js" crossorigin="anonymous"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdg3NKQlbc9sVcuo8aRzLZQLtPoLrPZsw&callback=loadMap" async defer></script>
-	</script>
+    </script>
+    
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.counter').counterUp({
+                delay: 50,
+                time: 1000
+            });
+        });
+    </script>
 </body>
 
 </html>
