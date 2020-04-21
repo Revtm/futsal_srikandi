@@ -38,10 +38,11 @@
 	<header>
 		<h2><a href="#">Futsal Srikandi</a></h2>
 		<nav>
-			<li><a href="#">Home</a></li>
-			<li><a href="#services">Profile</a></li>
-            <li><a href="#portofolio">Venue</a></li>
-            <li><a href="#portofolio">Subscribe</a></li>
+			<li><a href="/home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#newsletter">Subscribe</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#venue">Venue</a></li>
             
 		</nav>
 	</header>
@@ -125,9 +126,9 @@
     </section>
 
 	<section class="newsletter" id="newsletter">
-		<h3 class="header-text">Subscribe</h3>
-		<p></p>
-		<form action="">
+        <h3 class="header-text">Subscribe</h3>
+		<p>Dapatkan info menarik dan event dari kami dengan melakukan subscribe </p>
+        <div class="single-newsletter">
 			<div class="field-name">
 				<i class="fas fa-user"></i>
 				<input type="text" placeholder="Nama" required>
@@ -142,7 +143,8 @@
 				<i class="fas fa-heart"></i>
 				Thank You !
 				<i class="fas fa-heart"></i>
-			</div>
+            </div>
+        </div>
 		</form>
 	</section>
 
