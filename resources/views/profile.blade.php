@@ -2,10 +2,15 @@
 <html>
 
 <head>
-	<title>Vehicle | Srikandi Rent</title>
+    <title>Profil | Futsal Srikandi</title>
+    
 	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
 	<script type="text/javascript" src="js/googlemap.js"></script>
-	<link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/profile-style.css">
 	<style type="text/css">
 		.container {
 			height: 450px;
@@ -28,15 +33,13 @@
 <body>
 
 	<header>
-		<h2><a href="#">Srikandi Rent</a></h2>
+		<h2><a href="#">Futsal Srikandi</a></h2>
 		<nav>
 			<li><a href="#">Home</a></li>
-			<li><a href="#services">Services</a></li>
-			<li><a href="#portofolio">Portofolio</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#newsletter">Subscribe</a></li>
-			<li><a href="#maps">See Vehicles</a></li>
-			<li><a href="#list">Our Vehicles</a></li>
+			<li><a href="#services">Profile</a></li>
+            <li><a href="#portofolio">Venue</a></li>
+            <li><a href="#portofolio">Subscribe</a></li>
+            
 		</nav>
 	</header>
 
@@ -44,9 +47,9 @@
 	<section class="banner-area">
 		<div class="img-area"></div>
 		<div class="banner-text">
-			<h1>Srikandi Rent</h1>
+			<h1>Futsal Srikandi</h1>
 			<h3>Make it Easy...</h3>
-			<a href="#" class="btn">Learn More</a>
+			<a href="/home" class="btn">Get Started</a>
 		</div>
 	</section>
 
@@ -76,4 +79,64 @@
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, inventore.</p>
 			</div>
 		</div>
+    </section>
+
+	<section class="newsletter" id="newsletter">
+		<h3 class="header-text">Subscribe Us</h3>
+		<p>Lorem ipsum dolor sit amet.</p>
+		<form action="">
+			<div class="field-name">
+				<i class="fas fa-user"></i>
+				<input type="text" placeholder="Nama" required>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="field-email innactive">
+				<i class="fas fa-arrow-down"></i>
+				<input type="email" placeholder="Email" required>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="field-password innactive">
+				<i class="fas fa-key"></i>
+				<input type="password" placeholder="Pesan" required>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="field-finish innactive">
+				<i class="fas fa-heart"></i>
+				Thank You !
+				<i class="fas fa-heart"></i>
+			</div>
+		</form>
 	</section>
+
+	<section class="contact" id="contact">
+		<h3 class="header-text">Contact Us</h3>
+		<p>Lorem ipsum dolor sit amet.</p>
+		<div class="content-area">
+			<div class="single-contact">
+				<i class="fa fa-map-marker"></i>
+				<p>Ryacudu Street, 30B <br> South Lampung Regency, Lampung</p>
+				<i class="fa fa-envelope"></i>
+				<p>srikandirent@gmail.com</p>
+				<i class="fa fa-phone"></i>
+				<p>+628 1411 15543</p>
+			</div>
+
+			<div class="single-contact">
+				<input type="text" placeholder="Enter Your Name....">
+				<input type="email" placeholder="Enter Your Email....">
+				<input type="submit" value="submit">
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>All Right reserved by &copy; <a href="#">Rivaldo Fernandes</a></p>
+	</footer>
+
+	<script src="js/app.js"></script>
+	<script src="https://kit.fontawesome.com/3f4aa1c6f5.js" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdg3NKQlbc9sVcuo8aRzLZQLtPoLrPZsw&callback=loadMap" async defer></script>
+	</script>
+</body>
+
+</html>

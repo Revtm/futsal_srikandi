@@ -5,8 +5,8 @@
 }
 
 html {
-    color: rgb(41,173,118);
-    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    font-family: Helvetica;
     scroll-behavior: smooth;
 }
 
@@ -23,6 +23,7 @@ a {
 
 a:hover {
     opacity: 1;
+    color: rgb(41,173,118);
 }
 
 a.btn {
@@ -55,7 +56,7 @@ section {
 
 section h3.header-text {
     text-transform: uppercase;
-    font-family: Cambria;
+    font-family: Helvetica;
     margin-bottom: 5px;
     text-align: center;
     font-size: 45px;
@@ -95,7 +96,7 @@ header {
 }
 
 header h2 {
-    font-family: Baloo;
+    font-family: Helvetica;
 }
 
 header nav {
@@ -129,6 +130,8 @@ header nav li {
     min-height: 100vh;
     color: #fff;
 }
+
+
 
 .banner-area .img-area {
     position: absolute;
