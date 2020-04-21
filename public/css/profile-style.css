@@ -256,8 +256,10 @@ header nav li {
 .field-password,
 .field-finish {
     position: absolute;
+    color: black;
+
     transform: translate(-50%, -50%);
-    background: #f8c300;
+    background: rgb(232,240,254);
     width: 70%;
     height: 50px;
     display: flex;
@@ -283,6 +285,8 @@ header nav li {
     flex: 1;
     height: 100%;
     outline: none;
+    color: black;
+    font-size: medium;
 }
 
 div.innactive {
@@ -384,39 +388,4 @@ footer p {
     background-color: rgb(221, 221, 221);
 }
 
-.list-container {
-    width: 100;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-
-table.table-style-two {
-    font-family: verdana, arial, sans-serif;
-    font-size: 11px;
-    color: #333333;
-    border-width: 1px;
-    border-color: #3A3A3A;
-    border-collapse: collapse;
-}
-
-table.table-style-two th {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #517994;
-    background-color: #B2CFD8;
-}
-
-table.table-style-two tr:hover td {
-    background-color: #DFEBF1;
-}
-
-table.table-style-two td {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #517994;
-    background-color: #ffffff;
-}
