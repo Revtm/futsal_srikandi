@@ -5,7 +5,7 @@
 }
 
 html {
-    color: #666;
+    color: rgb(41,173,118);
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
@@ -30,7 +30,7 @@ a.btn {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    background-color: #f8c300;
+    background-color: rgb(41,173,118);
     opacity: 1;
 }
 
@@ -139,7 +139,7 @@ header nav li {
     -webkit-background-size: cover;
     background-size: cover;
     z-index: -1;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/mancar.jpg);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/img/profilebg.jpg);
     background-position: center center;
 }
 
