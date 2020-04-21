@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">Daftar Penyewa</h4>
+                <h4 class="title">Tambah Sewa</h4>
                 <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()"/>
             </div>
             <div class="content table-responsive table-full-width">
