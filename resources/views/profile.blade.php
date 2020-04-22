@@ -100,7 +100,15 @@
 	
 	<section class="maps" id="maps">
 		<div class="container">
-			
+			<h3 class="header-text">Our Vehicles</h3>
+			<?php
+			$dump = json_encode($dump, true);
+			echo '<div id="data">' . $dump . '</div>';
+
+			$lapangan = json_encode($lapangan, true);
+			echo '<div id="allData">' . $lapan . '</div>';
+			?>
+			<div id="map"></div>
 		</div>
 	</section>
 
