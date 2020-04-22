@@ -25,6 +25,8 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/logout', 'AuthController@logout');
+
 
 Route::get('schedule', 'ScheduleCon@index' );
 Route::get('schedule/getdata', 'ScheduleCon@getDataTransaksi' );
