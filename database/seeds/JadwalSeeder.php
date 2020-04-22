@@ -24,7 +24,7 @@ class JadwalSeeder extends Seeder
                 $jam = $i.'.00-'.$end.'.00';
             } 
 
-            DB::table('Jadwal')->insert([
+            DB::table('jadwal')->insert([
                'kode_jadwal' => 'A'.$j ,
                'jam' => $jam,
                'harga' => '110000'
@@ -42,7 +42,7 @@ class JadwalSeeder extends Seeder
                 $jam = $i.'.00-'.$end.'.00';
             } 
 
-            DB::table('Jadwal')->insert([
+            DB::table('jadwal')->insert([
                'kode_jadwal' => 'B'.$j ,
                'jam' => $jam,
                'harga' => '120000'
@@ -60,7 +60,7 @@ class JadwalSeeder extends Seeder
                 $jam = $i.'.00-'.$end.'.00';
             } 
 
-            DB::table('Jadwal')->insert([
+            DB::table('jadwal')->insert([
                'kode_jadwal' => 'T'.$j ,
                'jam' => $jam,
                'harga' => '130000'

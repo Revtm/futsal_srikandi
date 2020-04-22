@@ -7,7 +7,18 @@
         <div class="card">
             <div class="header">
                 <h4 class="title">Daftar Penyewa</h4>
-                        <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()"/>
+                  <form action="/daftarpenyewa" method="get">
+                        {{csrf_field()}}
+                        <div class="row">
+                          <div class="col-md-9">
+                            <input name="tanggal" id="datepicker" width="270" value="{{$tanggal}}"/>
+                          </div>
+                          <div class="col-md-3">
+                            <button type="submit" class="btn btn-info" name="button">Filter</button>
+                          </div>
+                        </div>
+
+                  </form>
             </div>
             <div class="content table-responsive table-full-width">
                 <table class="table table-hover table-striped">
