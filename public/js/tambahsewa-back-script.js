@@ -17,13 +17,8 @@
           "<div class=\"content\">"+
                   "<input type=\"text\" hidden name=\"tanggal_jadwal[]\" value=\"" + tanggal + "\" >"+
                   "<input type=\"text\" hidden name=\"kode_jadwal[]\" value=\"" + kode_jadwal + "\" >"+
+                  "<input type=\"hidden\" name=\"kode_lapangan[]\" value=\"" + kode_lapangan + "\">"+
                   "<div class=\"row\">"+
-                      "<div class=\"col-md-2\">"+
-                          "<div class=\"form-group\">"+
-                              "<label>Kode Lapangan</label>"+
-                              "<input type=\"text\" class=\"form-control\" readonly name=\"kode_lapangan[]\" value=\"" + kode_lapangan + "\">"+
-                          "</div>"+
-                      "</div>"+
                       "<div class=\"col-md-2\">"+
                           "<div class=\"form-group\">"+
                               "<label>Lokasi Lapangan</label>"+
@@ -40,6 +35,12 @@
                           "<div class=\"form-group\">"+
                               "<label for=\"exampleInputEmail1\">Harga</label>"+
                               "<input type=\"text\" class=\"form-control\" name=\"harga[]\" value=\"" + harga + "\" required>"+
+                          "</div>"+
+                      "</div>"+
+                      "<div class=\"col-md-2\">"+
+                          "<div class=\"form-group\">"+
+                              "<label for=\"exampleInputEmail1\">Diskon</label>"+
+                              "<input type=\"number\" class=\"form-control\" name=\"diskon[]\" value=\"0\">"+
                           "</div>"+
                       "</div>"+
                       "<div class=\"col-md-2\">"+

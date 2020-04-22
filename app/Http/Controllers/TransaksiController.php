@@ -50,7 +50,7 @@ class TransaksiController extends Controller
 
           Transaksi::create(
             ['kode_transaksi' => null, 'kode_operator'=> 1, 'kode_user' => $userfdb->kode_user,
-            'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>5000,
+            'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>$request->diskon[$i],
             'tanggal'=>$request->tanggal_jadwal[$i]]
           );
         }
