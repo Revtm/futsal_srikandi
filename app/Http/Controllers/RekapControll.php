@@ -44,6 +44,6 @@ class RekapControll extends Controller
     }
 
     public function eksporExcel($dari, $ke){
-      return Excel::download(new RekapEkspor($dari, $ke), 'rekap_penghasilan.xlsx');
+      return Excel::download(new RekapEkspor($dari, $ke), 'Rekap Penghasilan '.$dari.' to '.$ke.'.xlsx');
     }
 }
