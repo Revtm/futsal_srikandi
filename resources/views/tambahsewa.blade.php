@@ -24,14 +24,22 @@
             </div>
         </div>
     </div>
-    
+
     <form method="post" action="\tambahsewa\input">
         {{csrf_field()}}
-        <div class="col-md-12">
-            <div class="kartu"></div>
+
+        <div class="row" style="padding-bottom: 20px; padding-top:20px;">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-right: 10px;" name="button btn"><b>TAMBAH</b></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="kartu"></div>
+          </div>
         </div>
     </form>
-      
+
     <script type="text/javascript">
         window.onload = function() {
             buatId();
