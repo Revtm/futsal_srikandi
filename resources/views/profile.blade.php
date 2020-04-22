@@ -97,6 +97,26 @@
         </div>
 	</section>
 
+	
+	<section class="maps" id="maps">
+		<div class="container">
+			<h3 class="header-text">Our Vehicles</h3>
+			<?php
+			require 'vehicle.php';
+			$vhc = new vehicle;
+			$coll = $vhc->getVehicleBlankLatLng();
+			$coll = json_encode($coll, true);
+			echo '<div id="data">' . $coll . '</div>';
+
+			$allData = $vhc->getAllVehicle();
+			$allData = json_encode($allData, true);
+			echo '<div id="allData">' . $allData . '</div>';
+			?>
+			<div id="map"></div>
+		</div>
+	</section>
+
+
 	<section class="services-area" id="services">
 		<h3 class="header-text">Layanan Kami</h3>
 		<p>Kami Menyediakan Layanan & Venue Olahraga Terbaik Untuk Anda </p>
@@ -176,8 +196,6 @@
 	<script src="/js/profile.js"></script>
 	<script src="https://kit.fontawesome.com/3f4aa1c6f5.js" crossorigin="anonymous"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdg3NKQlbc9sVcuo8aRzLZQLtPoLrPZsw&callback=loadMap" async defer></script>
-    </script>
-    
     <script src="/js/jquery.counterup.min.js"></script>
     <script src="/js/jquery.waypoints.min.js"></script>
 
