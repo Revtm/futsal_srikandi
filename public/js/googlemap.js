@@ -2,7 +2,7 @@ var map;
 var geocoder;
 
 function loadMap() {
-	var ind = {lat: -5.357987, lng: 105.314817};
+	var ind = {lat: -5.376350, lng: 105.255730};
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: ind

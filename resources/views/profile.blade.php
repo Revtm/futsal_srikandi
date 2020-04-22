@@ -100,19 +100,7 @@
 	
 	<section class="maps" id="maps">
 		<div class="container">
-			<h3 class="header-text">Our Vehicles</h3>
-			<?php
-			require 'vehicle.php';
-			$vhc = new vehicle;
-			$coll = $vhc->getVehicleBlankLatLng();
-			$coll = json_encode($coll, true);
-			echo '<div id="data">' . $coll . '</div>';
-
-			$allData = $vhc->getAllVehicle();
-			$allData = json_encode($allData, true);
-			echo '<div id="allData">' . $allData . '</div>';
-			?>
-			<div id="map"></div>
+			
 		</div>
 	</section>
 

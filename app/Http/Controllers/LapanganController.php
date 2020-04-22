@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class LapanganController extends Controller
 {
     public function index()
-    {
-        $lapangan = Lapangan::distinct()->get(['latitude','longitude', 'nama'])->get()
-        return view('profile',compact('lapangan'));
+    {   
+        $dump = Lapangan::where([['lat', '=', 'NULL']])->get();
+        $lapangan = Lapangan::distinct()->get(['lat','lng','nama']);
+        return view('profile',['lapangan'=>$lapangan,'dump'=>$dump]);
     }
-   
 }
