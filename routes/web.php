@@ -42,7 +42,7 @@ Route::post('/tambahsewa/input', 'TransaksiController@store');
 Route::get('/tambahsewa/datalapangan', 'TambahSewaControll@dataLapangan');
 
 Route::get('/rekap', 'RekapControll@index');
-Route::post('/rekap/filter', 'RekapControll@filter');
+//Route::post('/rekap/filter', 'RekapControll@filter');
 Route::get('/rekap/filter', 'RekapControll@filter');
 Route::get('/rekap/excel/{dari}/{ke}', 'RekapControll@eksporExcel')->name('excel.ekspor');
 

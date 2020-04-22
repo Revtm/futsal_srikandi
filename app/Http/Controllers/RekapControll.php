@@ -13,10 +13,19 @@ use Illuminate\Http\Request;
 
 class RekapControll extends Controller
 {
-    public function index(){
-      $dataRekap = RekapPenghasilan::where('tanggal', date("Y-m-d"))->get();
-      $tanggal = ['d' => date("Y-m-d") , 'k' => date("Y-m-d")];
-      return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal]);
+    public function index(Request $request){
+      if(isset($request->ke)){
+        $dataRekap = RekapPenghasilan::where([['tanggal','>=', $request->dari],
+        ['tanggal','<=', $request->ke]])->get();
+        $tanggal['d'] =  $request->dari;
+        $tanggal['k'] = $request->ke;
+        return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
+      }else{
+        $dataRekap = RekapPenghasilan::where('tanggal', date("Y-m-d"))->get();
+        $tanggal = ['d' => date("Y-m-d") , 'k' => date("Y-m-d")];
+        return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
+      }
+
     }
 
     public function filter(Request $request){
@@ -24,7 +33,7 @@ class RekapControll extends Controller
       ['tanggal','<=', $request->ke]])->get();
       $tanggal['d'] =  $request->dari;
       $tanggal['k'] = $request->ke;
-      return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal]);
+      return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
     }
 
     public function eksporExcel($dari, $ke){
