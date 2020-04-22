@@ -17,7 +17,7 @@ class TransaksiController extends Controller
     {
 
 
-        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-21')->get(); 
+        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-21')->get();
 
         return view('daftarpenyewa',compact('transaksi'), ['operator_nama'=>$request->session()->get('nama')]);
     }
@@ -29,27 +29,24 @@ class TransaksiController extends Controller
      */
     public function store(Request $request){
 
-        $userfdb = User::where([['nama', '=', $request->nama],
-        ['telepon', '=', $request->kontak]])->first();
+        for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
+          $userfdb = User::where([['nama', '=', $request->nama[$i]],
+          ['telepon', '=', $request->kontak[$i]]])->first();
 
-        if($userfdb){
-
-        }else{
+          if(!$userfdb){
             User::create(
-             ['kode_user' => "11", 'nama' => $request->nama,
-             'telepon' => $request->kontak, 'alamat' => "Jl. Planet Bekasi"]
+             ['kode_user' => null, 'nama' => $request->nama[$i],
+             'telepon' => $request->kontak[$i]]
             );
 
-             $userfdb = User::where([['nama', '=', $request->nama],
-             ['telepon', '=', $request->kontak]])->first();
+             $userfdb = User::where([['nama', '=', $request->nama[$i]],
+             ['telepon', '=', $request->kontak[$i]]])->first();
+          }
 
-        }
-
-        for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
           Transaksi::create(
-            ['kode_transaksi' => "18", 'kode_operator'=> 3, 'kode_user' => $userfdb->kode_user,
+            ['kode_transaksi' => null, 'kode_operator'=> 1, 'kode_user' => $userfdb->kode_user,
             'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>5000,
-            'tanggal'=>'2020-04-21']
+            'tanggal'=>$request->tanggal_jadwal[$i]]
           );
         }
 
