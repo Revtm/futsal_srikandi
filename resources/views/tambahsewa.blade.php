@@ -7,7 +7,7 @@
         <div class="card">
             <div class="header">
                 <h4 class="title">Tambah Sewa</h4>
-                <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()"/>
+                <input id="datepicker" width="270" value="<?php date_default_timezone_set("Asia/Jakarta"); echo date("Y-m-d"); ?>" onchange="getJSON()"/>
             </div>
             <div class="content table-responsive table-full-width">
                 <div class="jadwal">

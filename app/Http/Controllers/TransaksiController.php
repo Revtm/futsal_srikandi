@@ -15,10 +15,11 @@ class TransaksiController extends Controller
      */
     public function index(Request $request)
     {
+        date_default_timezone_set("Asia/Jakarta");
         if(isset($request->tanggal)){
           $tanggal = $request->tanggal;
         }else{
-          $tanggal = "2020-04-16";
+          $tanggal = date("Y-m-d");
         }
 
         $transaksi = Transaksi::with('user','operator')->where('tanggal', $tanggal)->get();
