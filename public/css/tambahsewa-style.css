@@ -1,7 +1,97 @@
+.lapangan{
+  width: 150px;
+}
 
-.kartubaru{
-  background:#dadada;
-  padding: 10px;
-  color: #35495e;
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.baris{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Open Sans";
+  height: 6vh;
+}
+
+.credentialing {
+  --bg-color: #B8F9D3;
+  --bg-color-light: #e2fced;
+  --text-color-hover: #4C5656;
+  --box-shadow-color: rgba(184, 249, 211, 0.48);
+}
+
+.cards {
+  width: 80px;
+  height: 50px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
   border-radius: 10px;
-  margin-bottom: 10px;
+  cursor: pointer;
+  color: #40c78f;
+}
+
+.cards:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.cards:hover .overlay {
+  transform: scale(5) translateZ(0);
+}
+
+.cards:hover .jam {
+  color: black;
+}
+
+.cards:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.cards .jam {
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.overlay {
+  width: 118px;
+  position: absolute; 
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 100px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .baris{
+    height: 8vh;
+  }
+
+  .cards{
+    width: 50px;
+  }
+}

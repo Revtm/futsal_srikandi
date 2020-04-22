@@ -13,7 +13,7 @@ function hapusCSS(){
 //fungsi untuk mengganti warna
 function gantiWarna(kode){
     //ubah warna
-    var css = "#" + kode.kode_lapangan + "{background:black; color: black;}";
+    var css = "#" + kode.kode_lapangan + "{background:#00331e; color: white; pointer-events: none; cursor: not-allowed;}";
     var style = document.createElement('style');
 
      if (style.styleSheet) {

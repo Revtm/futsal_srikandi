@@ -14,6 +14,7 @@ class AuthController extends Controller
 
     public function postLogin(Request $request){
         if (Auth::guard('operator')->attempt(['nama' => $request->nama, 'password' => $request->password])) {
+            $request->session()->put('nama', $request->nama);
             return redirect()->route('home');
         } else {
             return redirect()->back();

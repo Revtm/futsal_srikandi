@@ -14,6 +14,7 @@ class TransaksiSeeder extends Seeder
         DB::table('transaksi')->delete();
         DB::table('transaksi')->insert([
             [
+                'kode_transaksi' => '1',
                 'kode_operator' => '1',
                 'kode_user' => '1',
                 'kode_lapangan' => 'LA-13',
@@ -23,6 +24,7 @@ class TransaksiSeeder extends Seeder
             ],
 
             [
+                'kode_transaksi' => '2',
                 'kode_operator' => '1',
                 'kode_user' => '2',
                 'kode_lapangan' => 'LA-13',
@@ -32,6 +34,7 @@ class TransaksiSeeder extends Seeder
             ],
 
             [
+                'kode_transaksi' => '3',
                 'kode_operator' => '1',
                 'kode_user' => '3',
                 'kode_lapangan' => 'LT-13',
@@ -41,6 +44,7 @@ class TransaksiSeeder extends Seeder
             ],
 
             [
+                'kode_transaksi' => '4',
                 'kode_operator' => '1',
                 'kode_user' => '1',
                 'kode_lapangan' => 'LA-07',
@@ -50,6 +54,7 @@ class TransaksiSeeder extends Seeder
             ],
 
             [
+                'kode_transaksi' => '5',
                 'kode_operator' => '1',
                 'kode_user' => '2',
                 'kode_lapangan' => 'LB-22',
@@ -59,6 +64,7 @@ class TransaksiSeeder extends Seeder
             ],
 
             [
+                'kode_transaksi' => '6',
                 'kode_operator' => '1',
                 'kode_user' => '3',
                 'kode_lapangan' => 'LT-15',
