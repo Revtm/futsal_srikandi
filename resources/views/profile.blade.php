@@ -15,12 +15,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/profile-style.css">
 	<style type="text/css">
-		.container {
-			height: 450px;
+		.maps .container-map {
+			height: 400px;
+			margin: 0%;
+			padding: 0%;
 			width: 100%;
 		}
 
 		#map {
+			margin: 0%;
+			padding: 0%;
 			width: 100%;
 			height: 100%;
 			border: 1px solid blue;
@@ -97,22 +101,6 @@
         </div>
 	</section>
 
-	
-	<section class="maps" id="maps">
-		<div class="container">
-			<h3 class="header-text">Our Vehicles</h3>
-			<?php
-			$dump = json_encode($dump, true);
-			echo '<div id="data">' . $dump . '</div>';
-
-			$lapangan = json_encode($lapangan, true);
-			echo '<div id="allData">' . $lapan . '</div>';
-			?>
-			<div id="map"></div>
-		</div>
-	</section>
-
-
 	<section class="services-area" id="services">
 		<h3 class="header-text">Layanan Kami</h3>
 		<p>Kami Menyediakan Layanan & Venue Olahraga Terbaik Untuk Anda </p>
@@ -140,6 +128,21 @@
 			</div>
 		</div>
     </section>
+
+	<section class="maps" id="maps">
+	<h3 class="header-text">Srikandi Venue</h3>
+		<p>Lokasi Futsal Srikandi tersebar pada beberapa lokasi </p>	
+	<div class="container-map">
+			<?php
+			$dump = json_encode($dump, true);
+			echo '<div id="data">' . $dump . '</div>';
+
+			$lapangan = json_encode($lapangan, true);
+			echo '<div id="allData">' . $lapangan . '</div>';
+			?>
+			<div id="map"></div>
+		</div>
+	</section>
 
 	<section class="newsletter" id="newsletter">
         <h3 class="header-text">Subscribe</h3>
