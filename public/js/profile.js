@@ -30,9 +30,9 @@ function animatedForm(){
 function validateUser(user){
     if(user.value.length < 6){
         console.log('no enough characters');
-        error('rgb(255, 77, 77)');
+        error('rgb(140,21,21)','rgb(255,255,255)');
     }else{
-        error('rgb(255,255,255)');
+        error('rgb(41,173,118)','rgb(33,37,41)');
         return true;
     }
 }
@@ -40,10 +40,10 @@ function validateUser(user){
 function validateEmail(email){
     const validation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(validation.test(email.value)){
-        error('rgb(255,255,255)');
+        error('rgb(41,173,118)','rgb(33,37,41)');
         return true;
     }else{
-        error('rgb(255, 77, 77)');
+        error('rgb(140,21,21)','rgb(255,255,255)');
     }
 }
 
@@ -53,8 +53,9 @@ function nextSlide(parent, nextForm){
     nextForm.classList.add("active");
 }
 
-function error(color){
+function error(color,text){
     document.getElementById("newsletter").style.backgroundColor = color;
+    document.getElementById("newsletter").style.color = text;
 }
 
 animatedForm();
