@@ -2,7 +2,7 @@
 
 namespace App\Exports;
 
-use App\RekapPenghasilan;
+use App\Transaksi;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
 class RekapEkspor implements FromCollection
@@ -19,7 +19,8 @@ class RekapEkspor implements FromCollection
     */
     public function collection()
     {
-        return RekapPenghasilan::where([['tanggal','>=', $this->dari],
+        
+        return Transaksi::with('jadwal')->where([['tanggal','>=', $this->dari],
         ['tanggal','<=', $this->ke]])->get();
     }
 
