@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TambahSewaModel;
+use App\Lapangan;
 
 class TambahSewaControll extends Controller
 {
@@ -12,7 +12,9 @@ class TambahSewaControll extends Controller
     }
 
     public function dataLapangan(){
-      $DataLapangan['data'] = TambahSewaModel::all();
+
+      $DataLapangan['data'] = Lapangan::with('jadwal')->get();
+      // $DataLapangan['data'] = TambahSewaModel::all();
       return json_encode($DataLapangan);
     }
 

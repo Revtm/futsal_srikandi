@@ -14,4 +14,8 @@ class Jadwal extends Model
     function transaksi() {
         return $this->hasMany(Transaksi::class,'kode_jadwal');
     }
+
+    function lapangan() {
+        return $this->hasMany(Lapangan::class,'kode_jadwal');
+    }
 }

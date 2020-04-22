@@ -79,7 +79,7 @@
                 for(i = 0 ; i < response['data'].length ; i++){
                   if(response['data'][i].kode_lapangan == id_btn){
                   //  alert(response['data'][i].kode_lapangan);
-                    tambahKartu(tanggal,response['data'][i].kode_lapangan,response['data'][i].lokasi,response['data'][i].kode_jadwal,response['data'][i].jam, response['data'][i].harga);
+                    tambahKartu(tanggal,response['data'][i].kode_lapangan,response['data'][i].lokasi,response['data'][i].kode_jadwal,response['data'][i].jadwal.jam, response['data'][i].jadwal.harga);
                   }
                 }
              }

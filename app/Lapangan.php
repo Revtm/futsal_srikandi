@@ -15,4 +15,8 @@ class Lapangan extends Model
     function transaksi() {
         return $this->hasMany(Transaksi::class,'kode_lapangan');
     }
+
+    function jadwal(){
+        return $this->belongsTo(Jadwal::class,'kode_jadwal');
+    }
 }
