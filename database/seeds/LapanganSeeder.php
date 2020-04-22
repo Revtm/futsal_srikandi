@@ -29,6 +29,8 @@ class LapanganSeeder extends Seeder
                'nama' => 'Lapangan Atas',
                'lokasi' => 'Atas',
                'kode_jadwal' => 'A'.$j,
+               'lat' => '-5.376350',
+               'lng' => '105.255730',
            ]);
         }
 
@@ -48,6 +50,8 @@ class LapanganSeeder extends Seeder
                'nama' => 'Lapangan Bawah',
                'lokasi' => 'Bawah',
                'kode_jadwal' => 'B'.$j,
+               'lat' => '-5.376141',
+               'lng' => '105.255585',
            ]);
         }
 
@@ -67,6 +71,8 @@ class LapanganSeeder extends Seeder
                'nama' => 'Lapangan Tengah',
                'lokasi' => 'Tengah',
                'kode_jadwal' => 'T'.$j,
+               'lat' => '-5.376303',
+               'lng' => '105.255432',
            ]);
         }
 
