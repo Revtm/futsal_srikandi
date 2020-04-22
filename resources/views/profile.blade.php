@@ -46,7 +46,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#newsletter">Subscribe</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#venue">Venue</a></li>
+            <li><a href="#maps">Venue</a></li>
             
 		</nav>
 	</header>
