@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class LapanganController extends Controller
 {
-    public function getDataLapangan(Request $request){
-        $lapangan['data']  = DB::table('lapangan')->distinct()->get(['latitude','longitude', 'nama']);
-        echo json_encode($trans);
-        exit;
+    public function index()
+    {
+        $lapangan = Lapangan::distinct()->get(['latitude','longitude', 'nama'])->get()
+        return view('profile',compact('lapangan'));
     }
+   
 }

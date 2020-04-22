@@ -50,6 +50,6 @@ Route::delete('/daftarpenyewa/{transaksi}','TransaksiController@destroy');
 Route::get('/daftarpenyewa/{transaksi}/edit','TransaksiController@edit');
 Route::patch('/daftarpenyewa/{transaksi}','TransaksiController@update');
 
-Route::get('/profile', function () {
+Route::get('/profile', 'LapanganController@getDataLapangan' {
     return view('profile');
 });
