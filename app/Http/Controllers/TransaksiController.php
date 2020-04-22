@@ -15,11 +15,15 @@ class TransaksiController extends Controller
      */
     public function index(Request $request)
     {
+        if(isset($request->tanggal)){
+          $tanggal = $request->tanggal;
+        }else{
+          $tanggal = "2020-04-16";
+        }
 
+        $transaksi = Transaksi::with('user','operator')->where('tanggal', $tanggal)->get();
 
-        $transaksi = Transaksi::with('user','operator')->where('tanggal', '2020-04-21')->get();
-
-        return view('daftarpenyewa',compact('transaksi'), ['operator_nama'=>$request->session()->get('nama')]);
+        return view('daftarpenyewa',compact('transaksi'), ['tanggal'=> $tanggal , 'operator_nama'=>$request->session()->get('nama')]);
     }
 
     /**
