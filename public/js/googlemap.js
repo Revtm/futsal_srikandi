@@ -27,12 +27,12 @@ function showAllColleges(allData) {
 		var content = document.createElement('div');
 		var strong = document.createElement('strong');
 		
-		strong.textContent = data.name;
+		strong.textContent = data.nama;
 		content.appendChild(strong);
 
 		var img = document.createElement('img');
-		img.src = 'images/profile.jpg';
-		img.style.width = '50px';
+		img.src = '/img/lapangan.png';
+		img.style.width = '40px';
 		content.appendChild(img);
 
 		var marker = new google.maps.Marker({
@@ -49,7 +49,7 @@ function showAllColleges(allData) {
 
 function codeAddress(cdata) {
    Array.prototype.forEach.call(cdata, function(data){
-    	var address = data.name + ' ' + data.address;
+    	var address = data.nama + ' ' + data.lokasi;
 	    geocoder.geocode( { 'address': address}, function(results, status) {
 	      if (status == 'OK') {
 	        map.setCenter(results[0].geometry.location);
