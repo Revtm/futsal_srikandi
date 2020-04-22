@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Transaksi;
 use App\User;
+use App\Operator;
 use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
@@ -33,6 +34,9 @@ class TransaksiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
+        $namaoperator = $request->nama_operator;
+
+        $operator = Operator::where('nama', $namaoperator)->first();
 
         for($i = 0 ; $i < count($request->kode_lapangan) ; $i++){
           $userfdb = User::where([['nama', '=', $request->nama[$i]],
@@ -49,7 +53,7 @@ class TransaksiController extends Controller
           }
 
           Transaksi::create(
-            ['kode_transaksi' => null, 'kode_operator'=> 1, 'kode_user' => $userfdb->kode_user,
+            ['kode_transaksi' => null, 'kode_operator'=> $operator->kode_operator, 'kode_user' => $userfdb->kode_user,
             'kode_lapangan'=> $request->kode_lapangan[$i],'kode_jadwal'=> $request->kode_jadwal[$i], 'diskon'=>$request->diskon[$i],
             'tanggal'=>$request->tanggal_jadwal[$i]]
           );
