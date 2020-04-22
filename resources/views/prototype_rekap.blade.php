@@ -51,9 +51,9 @@
                 <td> {{$t->kode_transaksi}} </td>
                 <td> {{$t->tanggal}} </td>
                 <td> {{$t->kode_lapangan}} </td>
-                <td> {{$t->jam}} </td>
+                <td> {{$t->jadwal->jam}} </td>
                 <td> {{$t->diskon}} </td>
-                <td> {{$t->harga}} </td>
+                <td> {{$t->jadwal->harga}} </td>
               </tr>
             @endforeach
           </table>

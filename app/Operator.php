@@ -15,9 +15,7 @@ class Operator extends Authenticatable
      * @var array
      */
     protected $table = "operator";
-
     protected $primaryKey = "kode_operator";
-
     protected $fillable = [
         'kode_operator', 'nama', 'password',
     ];

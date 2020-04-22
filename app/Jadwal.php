@@ -1,18 +1,17 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
 use App\Transaksi;
 
-class Lapangan extends Model
+class Jadwal extends Model
 {
-    protected $table = "lapangan";
-    protected $primaryKey = "kode_lapangan";
+    protected $table = "jadwal";
+    protected $primaryKey = 'kode_jadwal';
     public $timestamps = false;
     public $incrementing = false;
 
     function transaksi() {
-        return $this->hasMany(Transaksi::class,'kode_lapangan');
+        return $this->hasMany(Transaksi::class,'kode_jadwal');
     }
 }

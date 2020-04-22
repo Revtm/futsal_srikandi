@@ -2,6 +2,10 @@
 
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use App\User;
+use App\Jadwal;
+use App\Lapangan;
+
 
 class Transaksi extends Model
 {
@@ -17,6 +21,14 @@ class Transaksi extends Model
 
     function operator() {
         return $this->belongsTo(Operator::class,'kode_operator');
+    }
+
+    function jadwal(){
+        return $this->belongsTo(Jadwal::class,'kode_jadwal');
+    }
+
+    function lapangan(){
+        return $this->belongsTo(Lapangan::class,'kode_lapangan');
     }
 
 }
