@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
     public function index(Request $request) {
-        return view('dashboardoperator', ['operator_nama'=>$request->session()->get('nama')]);
+      if (Auth::guard('operator')->check()) {
+         return view('dashboardoperator', ['operator_nama'=>$request->session()->get('nama')]);
+
+      } else {
+         return redirect('/login');
+      }
     }
 
     public function accessSessionData(Request $request) {
