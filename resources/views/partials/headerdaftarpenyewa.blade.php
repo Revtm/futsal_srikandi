@@ -10,6 +10,9 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
+    <!-- CSFR token for ajax call -->
+    <meta name="_token" content="{{ csrf_token() }}"/>
+
     <!-- Vue JS -->
     <script type="text/javascript" src="js/vue/vue.js"></script>
 
@@ -28,7 +31,6 @@
     <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/tambahsewa-style.css">
-
 </head>
 <body onload="buatId()>
 

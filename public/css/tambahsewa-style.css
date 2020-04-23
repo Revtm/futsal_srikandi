@@ -2,9 +2,22 @@
   width: 150px;
 }
 
+.modal-backdrop{
+  background-color: white;
+}
+
+.modal{
+  margin-top: 10vh;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
+}
+
+.horizontal{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .baris{

@@ -101,21 +101,22 @@ class TransaksiController extends Controller
      * @param  \App\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transaksi $transaksi)
+    public function update(Request $request, $id)
     {
 
-        $updates = Transaksi::find($transaksi->kode_transaksi);
+        $updates = Transaksi::find($id);
         $updates->diskon = $request->diskon;
         $updates->kode_jadwal = $request->jadwal;
         $updates->tanggal = $request->tanggal;
         $updates->save();
 
-        $updates = User::find($transaksi->kode_user);
+        $updates = User::find($request->kode_user);
         $updates->nama = $request->nama;
         $updates->telepon = $request->kontak;
         $updates->save();
 
-        return redirect('/daftarpenyewa');
+        // return redirect('/daftarpenyewa');
+        return response()->json($updates);
     }
 
     /**
