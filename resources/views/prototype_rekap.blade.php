@@ -123,11 +123,11 @@
 
                   var options = {
                     title: 'Rekap Pendapatan '+dari+' Sampai '+ke,
-                    curveType: 'none',
+                    bars: 'horizontal',
                     legend: { position: 'bottom' }
                   };
 
-                  var chart = new google.visualization.LineChart(document.getElementById('rekap_chart'));
+                  var chart = new google.visualization.ColumnChart(document.getElementById('rekap_chart'));
 
                   chart.draw(data, options);
 

@@ -22,12 +22,12 @@ class RekapControll extends Controller
         // $dataRekap = RekapPenghasilan::where([['tanggal','>=', $request->dari],
         // ['tanggal','<=', $request->ke]])->get();
         $dataRekap = Transaksi::with('jadwal')->where([['tanggal','>=', $request->dari],
-        ['tanggal','<=', $request->ke]])->get();
+        ['tanggal','<=', $request->ke]])->orderBy('tanggal', 'ASC')->get();
         $tanggal['d'] =  $request->dari;
         $tanggal['k'] = $request->ke;
         return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
       }else{
-        $dataRekap = Transaksi::with('jadwal')->where('tanggal', date("Y-m-d"))->get();
+        $dataRekap = Transaksi::with('jadwal')->where('tanggal', date("Y-m-d"))->orderBy('tanggal', 'ASC')->get();
         // $dataRekap = RekapPenghasilan::where('tanggal', date("Y-m-d"))->get();
         $tanggal = ['d' => date("Y-m-d") , 'k' => date("Y-m-d")];
         return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
@@ -37,7 +37,7 @@ class RekapControll extends Controller
 
     public function filter(Request $request){
       $dataRekap = Transaksi::with('jadwal','lapangan')->where([['tanggal','>=', $request->dari],
-      ['tanggal','<=', $request->ke]])->get();
+      ['tanggal','<=', $request->ke]])->orderBy('tanggal', 'ASC')->get();
       $tanggal['d'] =  $request->dari;
       $tanggal['k'] = $request->ke;
       return view('prototype_rekap', ['rekap' => $dataRekap, 'tanggal' => $tanggal, 'operator_nama'=>$request->session()->get('nama')]);
@@ -77,7 +77,7 @@ class RekapControll extends Controller
       //$tahun="2020";//$request->tahun;
       //$dataRekap['transaksi'] = Transaksi::with('jadwal','lapangan')->where('tanggal','like', $tahun.'-'.$bulan.'-'.'%')->orderBy('tanggal', 'ASC')->get();
       $dataRekap['transaksi'] = Transaksi::with('jadwal','lapangan')->where([['tanggal','>=', $dari],
-      ['tanggal','<=', $ke]])->get();
+      ['tanggal','<=', $ke]])->orderBy('tanggal', 'ASC')->get();
       return json_encode($dataRekap);
     }
 

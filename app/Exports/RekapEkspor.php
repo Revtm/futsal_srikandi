@@ -19,9 +19,9 @@ class RekapEkspor implements FromCollection
     */
     public function collection()
     {
-        
+
         return Transaksi::with('jadwal')->where([['tanggal','>=', $this->dari],
-        ['tanggal','<=', $this->ke]])->get();
+        ['tanggal','<=', $this->ke]])->orderBy('tanggal', 'ASC')->get();
     }
 
 }
