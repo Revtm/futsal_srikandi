@@ -43,10 +43,12 @@
       <div class="content table-responsive table-full-width">
         <table class="table table-hover table-striped">
           <tr>
-            <th>Kode</th>
+            <th>Kode Transaksi</th>
             <th>Tanggal</th>
-            <th>Kode Lapangan</th>
+            <th>Lapangan</th>
             <th>Jam</th>
+            <th>Penyewa</th>
+            <th>Kontak</th>
             <th>Diskon</th>
             <th>Harga</th>
           </tr>
@@ -55,8 +57,10 @@
             <tr>
               <td> {{$t->kode_transaksi}} </td>
               <td> {{$t->tanggal}} </td>
-              <td> {{$t->kode_lapangan}} </td>
+              <td> {{$t->lapangan->nama}} </td>
               <td> {{$t->jadwal->jam}} </td>
+              <td> {{$t->user->nama}} </td>
+              <td> {{$t->user->telepon}} </td>
               <td> {{$t->diskon}} </td>
               <td> {{$t->jadwal->harga}} </td>
             </tr>
