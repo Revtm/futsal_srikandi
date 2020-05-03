@@ -45,7 +45,7 @@
         if(document.getElementsByName('nama[]').length > 0 && document.getElementsByName('kontak[]').length > 0){
 
           for(var k = 0 ; k < nama.length ; k++){
-            inHtml = inHtml + "Nama Penyewa: " + nama[k] +" Kontak: "+ kontak[k]+
+            inHtml = inHtml + "Nama Penyewa: " + nama[k] +" - Kontak: "+ kontak[k]+
             " - <b>Subtotal: Rp " + subtotal[k] + "</b></br>";
             total = total + subtotal[k];
           }
