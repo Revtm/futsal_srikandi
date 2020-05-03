@@ -34,15 +34,16 @@
     </div>
 
     <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-      <div class="col-md-6">
-        <h4 class="total-uang">Total: Rp 0,00</h4>
-        <div id="tampilsubtotal">
-
-        </div>
-      </div>
-        <div class="col-md-6">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="content">
             <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-right: 10px;" name="button btn"><b>TAMBAH</b></button>
+            <h4 id="total-uang"><b>Total: Rp 0,00</b></h4>
+            <div id="tampilsubtotal"></div>
+          </div>
         </div>
+
+      </div>
     </div>
     <div class="row">
         <div class="col-md-12">

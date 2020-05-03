@@ -5,41 +5,51 @@
       id_kartu = Array.from(h[0].children).indexOf(ch);
       h[0].removeChild(h[0].children[id_kartu]);
     }
-
+    function cekSama(arrNama, arrKontak, nama, kontak){
+      for(var j = 0 ; j < arrNama.length ; j++){
+        if(nama == arrNama[j] && kontak == arrKontak[j]){
+          return j;
+        }
+      }
+      return 999;
+    }
     function getSubTotal(){
       var arrNama = document.getElementsByName('nama[]');
       var arrKontak = document.getElementsByName('kontak[]');
       var arrHarga = document.getElementsByName('harga[]');
       var arrDiskon = document.getElementsByName('diskon[]');
-      var nama =[];
-      var kontak =[];
-      var subtotal =[];
+      var nama =["belum"];
+      var kontak =["0"];
+      var subtotal =[0];
       var inHtml = "";
+      var total = 0;
 
-      if(arrNama[0].value != "" && arrKontak[0].value !=""){
+      if(nama[0] == "belum" && kontak[0] == "0" && subtotal[0] == 0){
         for(var i = 0 ; i < arrKontak.length ; i++){
-          if(nama.length == 0 &&  i == 0){
-            nama.push(arrNama[i].value);
-            kontak.push(arrKontak[i].value);
-            subtotal.push(parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value));
+          if(nama.length == 1 &&  i == 0){
+            nama[0] = arrNama[i].value;
+            kontak[0] = arrKontak[i].value;
+            subtotal[0] = parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value);
           }else{
-            for(var j = 0 ; j < nama.length ; j++){
-              if(arrNama[i].value == nama[j] && arrKontak[i].value == kontak[j]){
-                subtotal[j] = subtotal[j] + parseInt(arrHarga[i].value) - parseInt(arrDiskon[i].value);
-              }else{
-                nama.push(arrNama[i].value);
-                kontak.push(arrKontak[i].value);
-                subtotal.push(parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value));
-              }
+            if(cekSama(nama, kontak, arrNama[i].value, arrKontak[i].value ) != 999){
+              var j = cekSama(nama, kontak, arrNama[i].value, arrKontak[i].value);
+              subtotal[j] = subtotal[j] + (parseInt(arrHarga[i].value) - parseInt(arrDiskon[i].value));
+            }else{
+              nama.push(arrNama[i].value);
+              kontak.push(arrKontak[i].value);
+              subtotal.push(parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value));
             }
           }
         }
 
         if(document.getElementsByName('nama[]').length > 0 && document.getElementsByName('kontak[]').length > 0){
+
           for(var k = 0 ; k < nama.length ; k++){
             inHtml = inHtml + "Nama Penyewa: " + nama[k] +" Kontak: "+ kontak[k]+
-            " Subtotal: " + subtotal[k] + "</br>";
+            " - <b>Subtotal: Rp " + subtotal[k] + "</b></br>";
+            total = total + subtotal[k];
           }
+          document.getElementById('total-uang').innerHTML = "<b>Total: Rp "+total+"</b>";
           document.getElementById('tampilsubtotal').innerHTML=inHtml;
         }else{
           document.getElementById('tampilsubtotal').innerHTML="";
@@ -47,8 +57,6 @@
       }else{
         document.getElementById('tampilsubtotal').innerHTML="";
       }
-
-
     }
 //untuk tambah kartu
     function tambahKartu(tanggal,kode_lapangan, lokasi, kode_jadwal ,jam, harga) {

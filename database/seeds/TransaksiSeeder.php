@@ -30,7 +30,7 @@ class TransaksiSeeder extends Seeder
                 'kode_lapangan' => 'LA-13',
                 'kode_jadwal' => 'A13',
                 'diskon' => '10000',
-                'tanggal' => '2020-04-16',
+                'tanggal' => '2020-05-03',
             ],
 
             [
@@ -40,7 +40,7 @@ class TransaksiSeeder extends Seeder
                 'kode_lapangan' => 'LT-13',
                 'kode_jadwal' => 'T13',
                 'diskon' => '5000',
-                'tanggal' => '2020-04-16',
+                'tanggal' => '2020-05-03',
             ],
 
             [
@@ -50,7 +50,7 @@ class TransaksiSeeder extends Seeder
                 'kode_lapangan' => 'LA-07',
                 'kode_jadwal' => 'A07',
                 'diskon' => '1000',
-                'tanggal' => '2020-04-15',
+                'tanggal' => '2020-05-04',
             ],
 
             [
@@ -60,7 +60,7 @@ class TransaksiSeeder extends Seeder
                 'kode_lapangan' => 'LB-22',
                 'kode_jadwal' => 'A22',
                 'diskon' => '3000',
-                'tanggal' => '2020-04-15',
+                'tanggal' => '2020-05-04',
             ],
 
             [
@@ -70,7 +70,7 @@ class TransaksiSeeder extends Seeder
                 'kode_lapangan' => 'LT-15',
                 'kode_jadwal' => 'T15',
                 'diskon' => '50000',
-                'tanggal' => '2020-04-15',
+                'tanggal' => '2020-05-04',
             ]
         ]);
     }
