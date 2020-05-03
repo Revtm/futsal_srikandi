@@ -24,7 +24,7 @@
     <div class="container">
         <div class="jadwal">
             <div class="search">
-                <input id="datepicker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()" />
+                <input id="date-picker" width="270" value="<?php echo date("Y-m-d"); ?>" onchange="getJSON()" />
 
                 <br>
             </div>
@@ -48,5 +48,16 @@
 
     <script src="js/schedule-script.js"></script>
     <script src="js/schedule-back-script.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#date-picker').datepicker({
+
+            uiLibrary: 'bootstrap', format: 'yyyy-mm-dd'
+
+        });
+
+    });
+    </script>
 </body>
 </html>

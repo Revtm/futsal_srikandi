@@ -7,7 +7,7 @@
     <div class="card">
         <div class="header">
             <h4 class="title">Tambah Sewa</h4>
-            <input id="datepicker" width="270" value="<?php date_default_timezone_set("Asia/Jakarta");
+            <input id="date-picker" width="270" value="<?php date_default_timezone_set("Asia/Jakarta");
                                                         echo date("Y-m-d"); ?>" onchange="getJSON()" />
         </div>
         <div class="content table-responsive table-full-width">
@@ -34,9 +34,16 @@
     </div>
 
     <div class="row" style="padding-bottom: 20px; padding-top:20px;">
-        <div class="col-md-12">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="content">
             <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-right: 10px;" name="button btn"><b>TAMBAH</b></button>
+            <h4 id="total-uang">Ringkasan</h4>
+            <div id="tampilsubtotal"></div>
+          </div>
         </div>
+
+      </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -49,5 +56,15 @@
     window.onload = function() {
         buatId();
     }
+</script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#date-picker').datepicker({
+
+        uiLibrary: 'bootstrap', format: 'yyyy-mm-dd'
+
+    });
+});
 </script>
 @endsection

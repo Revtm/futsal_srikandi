@@ -22,13 +22,28 @@ class JadwalSeeder extends Seeder
                 $j = $i;
                 $end = $i+1;
                 $jam = $i.'.00-'.$end.'.00';
-            } 
+            }
 
+            if($i >= 7 && $i <=14){
+              DB::table('jadwal')->insert([
+                 'kode_jadwal' => 'A'.$j ,
+                 'jam' => $jam,
+                 'harga' => '70000'
+             ]);
+           }else if($i >= 15 && $i <=17){
+             DB::table('jadwal')->insert([
+                'kode_jadwal' => 'A'.$j ,
+                'jam' => $jam,
+                'harga' => '80000'
+            ]);
+          }else{
             DB::table('jadwal')->insert([
                'kode_jadwal' => 'A'.$j ,
                'jam' => $jam,
                'harga' => '110000'
            ]);
+          }
+
         }
 
         for ($i=7; $i < 23; $i++) {
@@ -40,13 +55,27 @@ class JadwalSeeder extends Seeder
                 $j = $i;
                 $end = $i+1;
                 $jam = $i.'.00-'.$end.'.00';
-            } 
+            }
 
+            if($i >= 7 && $i <=14){
+              DB::table('jadwal')->insert([
+                 'kode_jadwal' => 'B'.$j ,
+                 'jam' => $jam,
+                 'harga' => '70000'
+             ]);
+           }else if($i >= 15 && $i <=17){
+             DB::table('jadwal')->insert([
+                'kode_jadwal' => 'B'.$j ,
+                'jam' => $jam,
+                'harga' => '80000'
+            ]);
+          }else{
             DB::table('jadwal')->insert([
                'kode_jadwal' => 'B'.$j ,
                'jam' => $jam,
-               'harga' => '120000'
+               'harga' => '110000'
            ]);
+          }
         }
 
         for ($i=7; $i < 23; $i++) {
@@ -58,13 +87,27 @@ class JadwalSeeder extends Seeder
                 $j = $i;
                 $end = $i+1;
                 $jam = $i.'.00-'.$end.'.00';
-            } 
+            }
 
+            if($i >= 7 && $i <=14){
+              DB::table('jadwal')->insert([
+                 'kode_jadwal' => 'T'.$j ,
+                 'jam' => $jam,
+                 'harga' => '70000'
+             ]);
+           }else if($i >= 15 && $i <=17){
+             DB::table('jadwal')->insert([
+                'kode_jadwal' => 'T'.$j ,
+                'jam' => $jam,
+                'harga' => '80000'
+            ]);
+          }else{
             DB::table('jadwal')->insert([
                'kode_jadwal' => 'T'.$j ,
                'jam' => $jam,
-               'harga' => '130000'
+               'harga' => '110000'
            ]);
+          }
         }
     }
 }
