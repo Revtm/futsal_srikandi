@@ -47,6 +47,7 @@ Route::get('/rekap', 'RekapControll@index');
 //Route::post('/rekap/filter', 'RekapControll@filter');
 Route::get('/rekap/filter', 'RekapControll@filter');
 Route::get('/rekap/excel/{dari}/{ke}', 'RekapControll@eksporExcel')->name('excel.ekspor');
+Route::get('/rekap/getDataRekap/{dari}/{ke}', 'RekapControll@getDataRekapBulanan');
 
 Route::get('/daftarpenyewa', 'TransaksiController@index');
 Route::delete('/daftarpenyewa/{transaksi}','TransaksiController@destroy');
