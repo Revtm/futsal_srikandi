@@ -10,7 +10,7 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- Vue JS -->
     <script type="text/javascript" src="js/vue/vue.js"></script>
 
@@ -33,7 +33,7 @@
     <!-- <link rel="stylesheet" href="css/dashboard-style.css"> -->
 
 </head>
-<body onload="buatId()>
+<body onload="buatId()">
 
 <div class="wrapper">
     <div class="sidebar" data-color="green" data-image="img/sidebar.png">
