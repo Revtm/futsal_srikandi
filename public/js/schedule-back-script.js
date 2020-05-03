@@ -30,7 +30,7 @@ function getJSON() {
     hapusCSS();
     hapusCSS();
 		hapusCSS();
-    var date = $('#datepicker').datepicker().value();
+    var date = $('#date-picker').datepicker().value();
       $.ajax({
          url: 'schedule/getdata',
          type: 'get',
