@@ -18,10 +18,20 @@
       var arrKontak = document.getElementsByName('kontak[]');
       var arrHarga = document.getElementsByName('harga[]');
       var arrDiskon = document.getElementsByName('diskon[]');
+      var arrLokasi= document.getElementsByName('lokasi[]');
+      var arrJam= document.getElementsByName('jam[]');
       var nama =["belum"];
       var kontak =["0"];
       var subtotal =[0];
-      var inHtml = "";
+      var lokasi=["belum"];
+
+      var inHtml = "<table class=\"table table-sm\" >"+
+                    "<tr>"+
+                          "<th>Nama Penyewa</th>"+
+                          "<th>Kontak</th>"+
+                          "<th>Lapangan</th>"+
+                          "<th>Total</th>"+
+                     "</tr>";
       var total = 0;
 
       if(nama[0] == "belum" && kontak[0] == "0" && subtotal[0] == 0){
@@ -30,14 +40,17 @@
             nama[0] = arrNama[i].value;
             kontak[0] = arrKontak[i].value;
             subtotal[0] = parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value);
+            lokasi[0] = arrLokasi[i].value+" ("+arrJam[i].value+")";
           }else{
             if(cekSama(nama, kontak, arrNama[i].value, arrKontak[i].value ) != 999){
               var j = cekSama(nama, kontak, arrNama[i].value, arrKontak[i].value);
               subtotal[j] = subtotal[j] + (parseInt(arrHarga[i].value) - parseInt(arrDiskon[i].value));
+              lokasi[j] = lokasi[j] +", "+arrLokasi[i].value+" ("+arrJam[i].value+")";
             }else{
               nama.push(arrNama[i].value);
               kontak.push(arrKontak[i].value);
               subtotal.push(parseInt(arrHarga[i].value)-parseInt(arrDiskon[i].value));
+              lokasi.push(arrLokasi[i].value+" ("+arrJam[i].value+")");
             }
           }
         }
@@ -45,16 +58,25 @@
         if(document.getElementsByName('nama[]').length > 0 && document.getElementsByName('kontak[]').length > 0){
 
           for(var k = 0 ; k < nama.length ; k++){
-            inHtml = inHtml + "Nama Penyewa: " + nama[k] +" - Kontak: "+ kontak[k]+
-            " - <b>Subtotal: Rp " + subtotal[k] + "</b></br>";
-            total = total + subtotal[k];
+            if(nama[k] != "" && kontak[k] != ""){
+              inHtml = inHtml +
+              "<tr>"+
+                "<td>"+nama[k]+"</td>"+
+                 "<td>"+kontak[k]+ "</td>"+
+                 "<td>"+lokasi[k]+"</td>"+
+                 "<td><b>"+subtotal[k]+"</b></td>"+
+              "</tr>";
+              //total = total + subtotal[k];
+            }
           }
-          document.getElementById('total-uang').innerHTML = "<b>Total: Rp "+total+"</b>";
-          document.getElementById('tampilsubtotal').innerHTML=inHtml;
+          //document.getElementById('total-uang').innerHTML = "<b>Total: Rp "+total+"</b>";
+          document.getElementById('tampilsubtotal').innerHTML=inHtml+"</table>";
         }else{
+          //document.getElementById('total-uang').innerHTML = "<b>Total: Rp "+total+"</b>";
           document.getElementById('tampilsubtotal').innerHTML="";
         }
       }else{
+        //document.getElementById('total-uang').innerHTML = "<b>Total: Rp "+total+"</b>";
         document.getElementById('tampilsubtotal').innerHTML="";
       }
     }
@@ -88,25 +110,25 @@
                       "<div class=\"col-md-2\">"+
                           "<div class=\"form-group\">"+
                               "<label for=\"exampleInputEmail1\">Harga</label>"+
-                              "<input type=\"text\" class=\"form-control\" name=\"harga[]\" value=\"" + harga + "\" required>"+
+                              "<input type=\"text\" class=\"form-control\" name=\"harga[]\" value=\"" + harga + "\" onkeyup=\"getSubTotal()\" required>"+
                           "</div>"+
                       "</div>"+
                       "<div class=\"col-md-2\">"+
                           "<div class=\"form-group\">"+
                               "<label for=\"exampleInputEmail1\">Diskon</label>"+
-                              "<input type=\"number\" class=\"form-control\" name=\"diskon[]\" value=\"0\">"+
+                              "<input type=\"number\" class=\"form-control\" name=\"diskon[]\" onkeyup=\"getSubTotal()\" value=\"0\" required>"+
                           "</div>"+
                       "</div>"+
                       "<div class=\"col-md-2\">"+
                           "<div class=\"form-group\">"+
                               "<label for=\"exampleInputEmail1\">Nama Penyewa</label>"+
-                              "<input type=\"text\" class=\"form-control\" name=\"nama[]\" placeholder=\"Contoh : Jefri Manurung\" onchange=\"getSubTotal()\" required>"+
+                              "<input type=\"text\" class=\"form-control\" name=\"nama[]\" placeholder=\"Contoh : Jefri Manurung\" oninput=\"getSubTotal()\" required>"+
                           "</div>"+
                       "</div>"+
                       "<div class=\"col-md-2\">"+
                           "<div class=\"form-group\">"+
                               "<label for=\"exampleInputEmail1\">Kontak Penyewa</label>"+
-                              "<input type=\"text\" class=\"form-control\" name=\"kontak[]\" placeholder=\"Contoh : 085274715359\" onchange=\"getSubTotal()\" required>"+
+                              "<input type=\"text\" class=\"form-control\" name=\"kontak[]\" placeholder=\"Contoh : 085274715359\" oninput=\"getSubTotal()\" required>"+
                           "</div>"+
                       "</div>"+
                   "</div>"+

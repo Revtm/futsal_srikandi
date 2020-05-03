@@ -38,7 +38,7 @@
         <div class="card">
           <div class="content">
             <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-right: 10px;" name="button btn"><b>TAMBAH</b></button>
-            <h4 id="total-uang"><b>Total: Rp 0,00</b></h4>
+            <h4 id="total-uang">Ringkasan</h4>
             <div id="tampilsubtotal"></div>
           </div>
         </div>
