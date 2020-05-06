@@ -23,7 +23,7 @@ a {
 
 a:hover {
     opacity: 1;
-    color: rgb(41,173,118);
+    color: rgb(41, 173, 118);
 }
 
 a.btn {
@@ -31,7 +31,7 @@ a.btn {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    background-color: rgb(41,173,118);
+    background-color: rgb(41, 173, 118);
     opacity: 1;
 }
 
@@ -84,9 +84,39 @@ header {
     align-items: center;
     padding: 35px 100px 0;
     animation: 1s animate 0.5 forwards;
-    opacity 0;
+    opacity: 0;
     color: #fff;
     z-index: 10;
+}
+
+.keterangan {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sudah_booking {
+    margin-top: 30px;
+    height: 50px;
+    width: 80px;
+    background: #0a5234;
+    border-radius: 10px;
+}
+
+.keterangan h4 {
+    margin-top: 15px;
+}
+
+.keterangan h4.dif {
+    margin-top: 45px;
+}
+
+.belum_booking {
+    height: 50px;
+    width: 80px;
+    background: #c9eadd;
+    border-radius: 10px;
 }
 
 @keyframes animate {
@@ -214,7 +244,7 @@ header nav li {
     width: 80px;
     height: 80px;
     display: inline-block;
-    background: rgb(41,173,118);
+    background: rgb(41, 173, 118);
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -267,7 +297,7 @@ header nav li {
     color: black;
 
     transform: translate(-50%, -50%);
-    background: rgb(232,240,254);
+    background: rgb(232, 240, 254);
     width: 70%;
     height: 50px;
     display: flex;
@@ -357,7 +387,7 @@ div.active {
 }
 
 .single-contact input[type=submit] {
-    background: rgb(41,173,118);
+    background: rgb(41, 173, 118);
     border: none;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -417,7 +447,7 @@ footer p {
 .stat-items h2 {
     font-weight: bold;
     font-size: 42px;
-    color: rgb(41,173,118);
+    color: rgb(41, 173, 118);
 }
 
 .stat p {
@@ -426,7 +456,7 @@ footer p {
 }
 
 .newsletter {
-    background: rgb(41,173,118);
+    background: rgb(41, 173, 118);
 }
 
 .single-newsletter {
