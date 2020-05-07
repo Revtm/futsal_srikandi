@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('test',function () {
     return view('test');
@@ -54,4 +54,4 @@ Route::delete('/daftarpenyewa/{transaksi}','TransaksiController@destroy');
 // Route::get('/daftarpenyewa/{transaksi}/edit','TransaksiController@edit');
 Route::put('/daftarpenyewa/{transaksi}','TransaksiController@update');
 
-Route::get('/profile', 'LapanganController@index');
+Route::get('/', 'LapanganController@index');

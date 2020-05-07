@@ -13,7 +13,7 @@ class ScheduleCon extends Controller{
   }
 
   public function getDataTransaksi(Request $request){
-      $trans['data']  = DB::table('transaksi')->get();
+      $trans['trans']  = DB::table('transaksi')->get();
       echo json_encode($trans);
       exit;
   }
