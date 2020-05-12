@@ -1,6 +1,7 @@
 <h1 align="center" >Aplikasi Web Penjadwalan Lapangan Futsal Srikandi</h1>
 <p align="center">Sebuah karya dari tugas kuliah Proyek Perangkat Lunak</p>
-<p align="center"><a href="http://53.175.109.231"/>Lihat Aplikasi</a></p>
+<p align="center"><a href="http://54.175.109.231"/>Lihat Aplikasi</a></p>
+<p align="center"><a href="https://www.youtube.com/embed/cHj8P5yviOo">Video Promosi</a></p>
 <hr>
 <h2>Fitur Utama</h2>
 <ol>
@@ -11,7 +12,7 @@
     <li>Visualisasi hasil rekap data penyewaan</li>
 </ol>
 
-<h2>Kontributor</h2>
+<h2>Kontributor (Basing Aja Team)</h2>
 <ul align="center" >
     <li><a href="https://github.com/dianasmrdhn">Dian (Project Manager) </a></li>
     <li><a href="https://github.com/hestiretnosari">Hesti (UI/UX Designer)</a></li>
