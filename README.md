@@ -56,8 +56,7 @@
     <p align="center"><img src="https://gijgo.com/Content/icons/logo.png" width="80"></p>
     </td>
     <td class="s1"><p align="center">Google Developer Chart</p>
-    <p align="center"><img src="https://code.google.com/images/developers.png
-" width="80"></p>
+    <p align="center"><img src="https://code.google.com/images/developers.png" width="80"></p>
     </td>
     </row>
 </table>
