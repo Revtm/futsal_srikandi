@@ -1,6 +1,6 @@
 <h1 align="center" >Aplikasi Web Penjadwalan Lapangan Futsal Srikandi</h1>
 <p align="center">Sebuah karya dari tugas kuliah Proyek Perangkat Lunak</p>
-<p align="center"><a href="53.175.109.231"/>Lihat Aplikasi</a></p>
+<p align="center"><a href="http://53.175.109.231"/>Lihat Aplikasi</a></p>
 <hr>
 <h2>Fitur Utama</h2>
 <ol>
@@ -13,12 +13,12 @@
 
 <h2>Kontributor</h2>
 <ul align="center" >
-    <li><a href="https://github.com/jefrymanurung23">Jefri</a></li>
-    <li><a href="https://github.com/rivaldofez">Rivaldo</a></li>
-    <li><a href="https://github.com/dianasmrdhn">Dian</a></li>
-    <li><a href="https://github.com/hestiretnosari">Hesti</a></li>
-    <li><a href="https://github.com/LigaSeptian">Liga</a></li>
-    <li><a href="https://github.com/revtm">Iqbal</a></li>
+    <li><a href="https://github.com/dianasmrdhn">Dian (Project Manager) </a></li>
+    <li><a href="https://github.com/hestiretnosari">Hesti (UI/UX Designer)</a></li>
+    <li><a href="https://github.com/LigaSeptian">Liga (Quality Assurance)</a></li>
+    <li><a href="https://github.com/jefrymanurung23">Jefri (Front-End Dev)</a></li>
+    <li><a href="https://github.com/rivaldofez">Rivaldo (Back-End Dev)</a></li>
+    <li><a href="https://github.com/revtm">Iqbal (Back-End Dev)</a></li>
 </ul>
 
 <h2>Tampilan</h2>
