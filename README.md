@@ -32,7 +32,7 @@
 <p align="center"><img src="https://github.com/Revtm/futsal_srikandi/blob/master/777.png" width="750px"></p>
 
 
-<h2>Sumberdaya Development</h2>
+<h2>———</h2>
 <table>
 <row class="sumberdaya">
         <td class="s1">
